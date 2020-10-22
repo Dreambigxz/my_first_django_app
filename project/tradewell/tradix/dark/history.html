@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!-- Mirrored from quixlab.com/demo/tradix/dark/history.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 13 Oct 2020 10:55:38 GMT -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tradix </title>
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon.png">
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="vendor/waves/waves.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div id="preloader">
+        <div class="sk-three-bounce">
+            <div class="sk-child sk-bounce1"></div>
+            <div class="sk-child sk-bounce2"></div>
+            <div class="sk-child sk-bounce3"></div>
+        </div>
+    </div>
+
+    <div id="main-wrapper">
+
+        <div class="header dashboard">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <nav class="navbar navbar-expand-lg navbar-light px-0 justify-content-between">
+                            <a class="navbar-brand" href="index.html"><img src="images/logo.png" alt="">
+                            </a>
+
+
+                            <div class="dashboard_log my-2">
+                                <div class="d-flex align-items-center">
+                                    <div class="account_money">
+                                        <ul>
+                                            <li class="crypto">
+                                                <span>0.0025</span>
+                                                <i class="cc BTC-alt"></i>
+                                            </li>
+                                            <li class="usd">
+                                                <span>19.93 USD</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="profile_log dropdown">
+                                        <div class="user" data-toggle="dropdown">
+                                            <span class="thumb"><i class="la la-user"></i></span>
+                                            <span class="name">Maria Pascle</span>
+                                            <span class="arrow"><i class="la la-angle-down"></i></span>
+                                        </div>
+                                        <div class="dropdown-menu dropdown-menu-right">
+                                            <a href="accounts.html" class="dropdown-item">
+                                                <i class="la la-user"></i> Account
+                                            </a>
+                                            <a href="history.html" class="dropdown-item">
+                                                <i class="la la-book"></i> History
+                                            </a>
+                                            <a href="settings.html" class="dropdown-item">
+                                                <i class="la la-cog"></i> Setting
+                                            </a>
+                                            <a href="lock.html" class="dropdown-item">
+                                                <i class="la la-lock"></i> Lock
+                                            </a>
+                                            <a href="signin.html" class="dropdown-item logout">
+                                                <i class="la la-sign-out"></i> Logout
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="sidebar">
+            <div class="menu">
+                <ul>
+                    <li>
+                        <a href="dashboard.html" data-toggle="tooltip" data-placement="right" title="Home">
+                            <span><i class="la la-igloo"></i></span>
+                        </a>
+                    </li>
+                    <li><a href="buy-sell.html" data-toggle="tooltip" data-placement="right" title="Exchange">
+                            <span><i class="la la-exchange-alt"></i></span>
+                        </a>
+                    </li>
+                    <li><a href="accounts.html" data-toggle="tooltip" data-placement="right" title="Account">
+                            <span><i class="la la-user"></i></span>
+                        </a>
+                    </li>
+                    <li><a href="settings.html" data-toggle="tooltip" data-placement="right" title="Setting">
+                            <span><i class="la la-tools"></i></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="page-title dashboard">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="page-title-content">
+                            <p>Welcome Back,
+                                <span> Maria Pascle</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-body">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="card">
+                            <div class="card-header border-0">
+                                <h4 class="card-title">Transaction History</h4>
+                            </div>
+                            <div class="card-body pt-0">
+                                <div class="transaction-table">
+                                    <div class="table-responsive">
+                                        <table class="table mb-0 table-responsive-sm">
+                                            <tbody>
+                                                <tr>
+                                                    <td><span class="sold-thumb"><i class="la la-arrow-down"></i></span>
+                                                    </td>
+
+                                                    <td>
+                                                        <span class="badge badge-danger">Sold</span>
+                                                    </td>
+                                                    <td>
+                                                        <i class="cc BTC"></i> BTC
+                                                    </td>
+                                                    <td>
+                                                        Using - Bank *******5264
+                                                    </td>
+                                                    <td class="text-danger">-0.000242 BTC</td>
+                                                    <td>-0.125 USD</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><span class="buy-thumb"><i class="la la-arrow-up"></i></span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="badge badge-success">Buy</span>
+                                                    </td>
+                                                    <td>
+                                                        <i class="cc LTC"></i> LTC
+                                                    </td>
+                                                    <td>
+                                                        Using - Card *******8475
+                                                    </td>
+                                                    <td class="text-success">-0.000242 BTC</td>
+                                                    <td>-0.125 USD</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><span class="sold-thumb"><i class="la la-arrow-down"></i></span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="badge badge-danger">Sold</span>
+                                                    </td>
+                                                    <td>
+                                                        <i class="cc XRP"></i> XRP
+                                                    </td>
+                                                    <td>
+                                                        Using - Card *******8475
+                                                    </td>
+                                                    <td class="text-danger">-0.000242 BTC</td>
+                                                    <td>-0.125 USD</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><span class="buy-thumb"><i class="la la-arrow-up"></i></span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="badge badge-success">Buy</span>
+                                                    </td>
+                                                    <td>
+                                                        <i class="cc DASH"></i> DASH
+                                                    </td>
+                                                    <td>
+                                                        Using - Card *******2321
+                                                    </td>
+                                                    <td class="text-success">-0.000242 BTC</td>
+                                                    <td>-0.125 USD</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><span class="sold-thumb"><i class="la la-arrow-down"></i></span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="badge badge-danger">Sold</span>
+                                                    </td>
+                                                    <td>
+                                                        <i class="cc BTC"></i> BTC
+                                                    </td>
+                                                    <td>
+                                                        Using - Card *******2321
+                                                    </td>
+                                                    <td class="text-danger">-0.000242 BTC</td>
+                                                    <td>-0.125 USD</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><span class="sold-thumb"><i class="la la-arrow-down"></i></span>
+                                                    </td>
+
+                                                    <td>
+                                                        <span class="badge badge-danger">Sold</span>
+                                                    </td>
+                                                    <td>
+                                                        <i class="cc BTC"></i> BTC
+                                                    </td>
+                                                    <td>
+                                                        Using - Bank *******5264
+                                                    </td>
+                                                    <td class="text-danger">-0.000242 BTC</td>
+                                                    <td>-0.125 USD</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><span class="buy-thumb"><i class="la la-arrow-up"></i></span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="badge badge-success">Buy</span>
+                                                    </td>
+                                                    <td>
+                                                        <i class="cc LTC"></i> LTC
+                                                    </td>
+                                                    <td>
+                                                        Using - Card *******8475
+                                                    </td>
+                                                    <td class="text-success">-0.000242 BTC</td>
+                                                    <td>-0.125 USD</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><span class="sold-thumb"><i class="la la-arrow-down"></i></span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="badge badge-danger">Sold</span>
+                                                    </td>
+                                                    <td>
+                                                        <i class="cc XRP"></i> XRP
+                                                    </td>
+                                                    <td>
+                                                        Using - Card *******8475
+                                                    </td>
+                                                    <td class="text-danger">-0.000242 BTC</td>
+                                                    <td>-0.125 USD</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><span class="buy-thumb"><i class="la la-arrow-up"></i></span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="badge badge-success">Buy</span>
+                                                    </td>
+                                                    <td>
+                                                        <i class="cc DASH"></i> DASH
+                                                    </td>
+                                                    <td>
+                                                        Using - Card *******2321
+                                                    </td>
+                                                    <td class="text-success">-0.000242 BTC</td>
+                                                    <td>-0.125 USD</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><span class="sold-thumb"><i class="la la-arrow-down"></i></span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="badge badge-danger">Sold</span>
+                                                    </td>
+                                                    <td>
+                                                        <i class="cc BTC"></i> BTC
+                                                    </td>
+                                                    <td>
+                                                        Using - Card *******2321
+                                                    </td>
+                                                    <td class="text-danger">-0.000242 BTC</td>
+                                                    <td>-0.125 USD</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="footer dashboard">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xl-6">
+                        <div class="copyright">
+                            <p>© Copyright 2019 <a href="#">Tradix</a> I All Rights Reserved</p>
+                        </div>
+                    </div>
+                    <div class="col-xl-6">
+                        <div class="footer-social">
+                            <ul>
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--removeIf(production)-->
+        <!--**********************************
+            Right sidebar start
+        ***********************************-->
+        <div class="sidebar-right">
+            <a class="sidebar-right-trigger" href="javascript:void(0)">
+                <span><i class="fa fa-cog fa-spin"></i></span>
+            </a>
+            <div class="sidebar-right-inner">
+                <div class="admin-settings">
+                    <div class="opt-background">
+                        <p>Font Family</p>
+                        <select class="form-control" name="theme_font" id="theme_font">
+                            <option value="nunito">Nunito</option>
+                            <option value="opensans">Open Sans</option>
+
+                        </select>
+                    </div>
+                    <div>
+                        <p>Primary Color</p>
+                        <div class="opt-nav-header-color">
+                            <span>
+                                <input type="radio" name="navigation_header" value="color_1"
+                                    class="filled-in chk-col-primary" id="nav_header_color_1" />
+                                <label for="nav_header_color_1"></label>
+                            </span>
+                            <span>
+                                <input type="radio" name="navigation_header" value="color_2"
+                                    class="filled-in chk-col-primary" id="nav_header_color_2" />
+                                <label for="nav_header_color_2"></label>
+                            </span>
+                            <span>
+                                <input type="radio" name="navigation_header" value="color_3"
+                                    class="filled-in chk-col-primary" id="nav_header_color_3" />
+                                <label for="nav_header_color_3"></label>
+                            </span>
+                            <span>
+                                <input type="radio" name="navigation_header" value="color_4"
+                                    class="filled-in chk-col-primary" id="nav_header_color_4" />
+                                <label for="nav_header_color_4"></label>
+                            </span>
+                            <span>
+                                <input type="radio" name="navigation_header" value="color_5"
+                                    class="filled-in chk-col-primary" id="nav_header_color_5" />
+                                <label for="nav_header_color_5"></label>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="opt-header-color">
+                        <p>Background Color</p>
+                        <div>
+                            <span>
+                                <input type="radio" name="header_bg" value="color_1" class="filled-in chk-col-primary"
+                                    id="header_color_1">
+                                <label for="header_color_1"></label>
+                            </span>
+                            <span>
+                                <input type="radio" name="header_bg" value="color_2" class="filled-in chk-col-primary"
+                                    id="header_color_2">
+                                <label for="header_color_2"></label>
+                            </span>
+                            <span>
+                                <input type="radio" name="header_bg" value="color_3" class="filled-in chk-col-primary"
+                                    id="header_color_3">
+                                <label for="header_color_3"></label>
+                            </span>
+                            <span>
+                                <input type="radio" name="header_bg" value="color_4" class="filled-in chk-col-primary"
+                                    id="header_color_4">
+                                <label for="header_color_4"></label>
+                            </span>
+                            <span>
+                                <input type="radio" name="header_bg" value="color_5" class="filled-in chk-col-primary"
+                                    id="header_color_5">
+                                <label for="header_color_5"></label>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--**********************************
+            Right sidebar end
+        ***********************************-->
+        <!--endRemoveIf(production)-->
+
+    </div>
+
+
+
+    <script src="js/global.js"></script>
+    
+    
+    <script src="js/scripts.js"></script>
+
+    <script src="js/settings.js"></script>
+    <script src="js/quixnav-init.js"></script>
+    <script src="js/styleSwitcher.js"></script>
+</body>
+
+
+<!-- Mirrored from quixlab.com/demo/tradix/dark/history.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 13 Oct 2020 10:55:38 GMT -->
+</html>

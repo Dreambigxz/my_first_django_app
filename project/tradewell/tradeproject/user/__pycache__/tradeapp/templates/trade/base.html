@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% load static %}
+<!-- Mirrored from quixlab.com/demo/tradix/dark/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 13 Oct 2020 10:51:29 GMT -->
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {% block tittle %}<title>Tradix</title>{% endblock %}
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'images/favicon.png' %}"/>
+    <link rel="stylesheet" href="{% static 'vendor/nice-select/css/nice-select.css' %}"/>
+    <link rel="stylesheet" href="{% static 'vendor/owl-carousel/css/owl.theme.default.css' %}">
+    <link rel="stylesheet" href="{% static 'vendor/owl-carousel/css/owl.carousel.min.css' %}"/>
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}"/>
+
+</head>
+
+
+{% block head %}
+<body>
+logo
+    <div id="preloader">
+        <div class="sk-three-bounce">
+            <div class="sk-child sk-bounce1"></div>
+            <div class="sk-child sk-bounce2"></div>
+            <div class="sk-child sk-bounce3"></div>
+        </div>
+    </div>
+
+    <div id="main-wrapper">
+
+        <div class="header">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-xl-12">
+                        <div class="navigation">
+                            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                                <a class="navbar-brand" href=""><img src="{% static 'images/logo.png' %}" alt=""></a>
+                                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                                    data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"
+                                    aria-expanded="false" aria-label="Toggle navigation">
+                                    <span class="navbar-toggler-icon"></span>
+                                </button>
+                                <div class="collapse navbar-collapse" id="navbbarNavDropdown">
+                                    <ul class="navbar-nav">
+
+
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="price.html">Home</a>
+                                        </li>
+
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Company
+                                            </a>
+                                            <div class="dropdown-menu">
+                                              <a class="dropdown-item" href="#">About us</a>
+                                              <a class="dropdown-item" href="#">Team</a>
+                                              <a class="dropdown-item" href="#">Blog</a>
+                                              <a class="dropdown-item" href="#">Career</a>
+                                            </div>
+                                        </li>
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Support
+                                            </a>
+                                            <div class="dropdown-menu">
+                                                <a class="dropdown-item" href="#">Contact us</a>
+                                                <a class="dropdown-item" href="#">Help Desk</a>
+                                                <a class="dropdown-item" href="#">FAQ</a>
+                                            </div>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">Dashboard</a>
+                                        </li>
+
+                                    </ul>
+                                </div>
+
+                                <div class="signin-btn">
+                                    <a class="btn btn-primary" href="{% url 'sign_in' %}">Sign in</a>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+{% endblock %}
+
+{% block body %} {% endblock %}
+
+
+{% block fotter %}
+        <div class="bottom section-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-6">
+                        <div class="bottom-logo">
+                            <img class="pb-3" src="images/logo-white.png" alt="">
+
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-lg-2 col-md-6 col-sm-6 col-6">
+                        <div class="bottom-widget">
+                            <h4 class="widget-title">Company</h4>
+                            <ul>
+                                <li><a href="#">About</a></li>
+                                <li><a href="#">Career</a></li>
+                                <li><a href="#">Affiliate</a></li>
+                                <li><a href="#">Our Partner</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-lg-2 col-md-6 col-sm-6 col-6">
+                        <div class="bottom-widget">
+                            <h4 class="widget-title">Support</h4>
+                            <ul>
+                                <li><a href="#">Ticket</a></li>
+                                <li><a href="#">FAQ</a></li>
+                                <li><a href="#">Blog</a></li>
+                                <li><a href="#">Helpdesk</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-6">
+                        <div class="bottom-widget">
+                            <h4 class="widget-title">Exchange Pair</h4>
+                            <div class="row">
+                                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6">
+                                    <ul>
+                                        <li><a href="#">ETH to BTC</a></li>
+                                        <li><a href="#">BTC to ETH</a></li>
+                                        <li><a href="#">LTC to ETH</a></li>
+                                        <li><a href="#">USDT to BTC</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6">
+                                    <ul>
+                                        <li><a href="#">BTC to USDT</a></li>
+                                        <li><a href="#">LTC to BTC</a></li>
+                                        <li><a href="#">XMR to BTC</a></li>
+                                        <li><a href="#">ETC to DASH</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                        <div class="copyright">
+                            <p>© Copyright 2019 <a href="#">Tradix</a> I All Rights Reserved</p>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                        <div class="footer-social">
+                            <ul>
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+{% endblock %}
+
+
+        <!--removeIf(production)-->
+        <!--**********************************
+            Right sidebar start
+        ***********************************-->
+        <div class="sidebar-right">
+            <a class="sidebar-right-trigger" href="javascript:void(0)">
+                <span><i class="fa fa-cog fa-spin"></i></span>
+            </a>
+            <div class="sidebar-right-inner">
+                <div class="admin-settings">
+                    <div class="opt-background">
+                        <p>Font Family</p>
+                        <select class="form-control" name="theme_font" id="theme_font">
+                            <option value="nunito">Nunito</option>
+                            <option value="opensans">Open Sans</option>
+
+                        </select>
+                    </div>
+                    <div>
+                        <p>Primary Color</p>
+                        <div class="opt-nav-header-color">
+                            <span>
+                                <input type="radio" name="navigation_header" value="color_1"
+                                    class="filled-in chk-col-primary" id="nav_header_color_1" />
+                                <label for="nav_header_color_1"></label>
+                            </span>
+                            <span>
+                                <input type="radio" name="navigation_header" value="color_2"
+                                    class="filled-in chk-col-primary" id="nav_header_color_2" />
+                                <label for="nav_header_color_2"></label>
+                            </span>
+                            <span>
+                                <input type="radio" name="navigation_header" value="color_3"
+                                    class="filled-in chk-col-primary" id="nav_header_color_3" />
+                                <label for="nav_header_color_3"></label>
+                            </span>
+                            <span>
+                                <input type="radio" name="navigation_header" value="color_4"
+                                    class="filled-in chk-col-primary" id="nav_header_color_4" />
+                                <label for="nav_header_color_4"></label>
+                            </span>
+                            <span>
+                                <input type="radio" name="navigation_header" value="color_5"
+                                    class="filled-in chk-col-primary" id="nav_header_color_5" />
+                                <label for="nav_header_color_5"></label>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="opt-header-color">
+                        <p>Background Color</p>
+                        <div>
+                            <span>
+                                <input type="radio" name="header_bg" value="color_1" class="filled-in chk-col-primary"
+                                    id="header_color_1">
+                                <label for="header_color_1"></label>
+                            </span>
+                            <span>
+                                <input type="radio" name="header_bg" value="color_2" class="filled-in chk-col-primary"
+                                    id="header_color_2">
+                                <label for="header_color_2"></label>
+                            </span>
+                            <span>
+                                <input type="radio" name="header_bg" value="color_3" class="filled-in chk-col-primary"
+                                    id="header_color_3">
+                                <label for="header_color_3"></label>
+                            </span>
+                            <span>
+                                <input type="radio" name="header_bg" value="color_4" class="filled-in chk-col-primary"
+                                    id="header_color_4">
+                                <label for="header_color_4"></label>
+                            </span>
+                            <span>
+                                <input type="radio" name="header_bg" value="color_5" class="filled-in chk-col-primary"
+                                    id="header_color_5">
+                                <label for="header_color_5"></label>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--**********************************
+            Right sidebar end
+        ***********************************-->
+        <!--endRemoveIf(production)-->
+    </div>
+
+{%  block static %}
+
+    <script src="{% static 'js/global.js' %} "></script>
+    <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+    <script src="{% static 'vendor/owl-carousel/js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'js/plugins/owl-carousel-init.js' %}"></script>
+
+    <script src="{% static 'vendor/apexchart/apexcharts.min.js' %}"></script>
+    <script src="{% static 'vendor/apexchart/apexchart-init.js' %}"></script>
+
+    <script src="{% static 'js/scripts.js' %}"></script>
+
+    <script src="{% static 'js/settings.js' %}"></script>
+    <script src="{% static 'js/quixnav-init.js' %}"></script>
+    <script src="{% static 'js/styleSwitcher.js' %}"></script>
+
+{% endblock %}
+</body>
+
+
+<!-- Mirrored from quixlab.com/demo/tradix/dark/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 13 Oct 2020 10:52:02 GMT -->
+</html>

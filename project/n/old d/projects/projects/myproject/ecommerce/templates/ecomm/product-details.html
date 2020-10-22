@@ -1,0 +1,857 @@
+<!doctype html>
+
+{% extends 'ecomm/base.html' %}
+{% load static %}
+
+ {% block tittle %}<title>Product</title>{% endblock %}
+
+{% block bg %}
+        <div class="breadcrumb-area bg-gray">
+            <div class="container">
+                <div class="breadcrumb-content text-center">
+                    <ul>
+                        <li>
+                            <a href="{% url 'product_store' %}">Home</a>
+                        </li>
+                        <li class="active">product details </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+{% endblock %}
+
+{% block content %}
+
+
+
+{% for message in messages%}
+
+<div id="revmess">{{message}}</div>
+
+{% endfor %}
+
+        <div class="product-details-area pt-120 pb-115">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <div class="product-details-tab">
+                            <div class="pro-dec-big-img-slider">
+                                <div class="easyzoom-style">
+                                    <div class="easyzoom easyzoom--overlay">
+                                        <a href="{{products.imageURL}}">
+                                            <img src="{{products.imageURL}}" alt="">
+                                        </a>
+                                    </div>
+                                    <a class="easyzoom-pop-up img-popup" href="assets/images/product-details/b-large-1.jpg"><i class="icon-size-fullscreen"></i></a>
+                                </div>
+
+                            {% for img in products.get_sub_images %}
+
+                                <div class="easyzoom-style">
+                                    <div class="easyzoom easyzoom--overlay">
+                                        <a href="{{img.imageURL1}}">
+                                            <img src="{{img.imageURL1}}" alt="">
+                                        </a>
+                                    </div>
+
+                                    <a class="easyzoom-pop-up img-popup" href="assets/images/product-details/b-large-2.jpg"><i class="icon-size-fullscreen"></i></a>
+                                </div>
+
+                                <div class="easyzoom-style">
+                                    <div class="easyzoom easyzoom--overlay">
+                                        <a href="{{img.imageURL2}}">
+                                            <img src="{{img.imageURL2}}" alt="">
+                                        </a>
+                                    </div>
+                                    <a class="easyzoom-pop-up img-popup" href="assets/images/product-details/b-large-3.jpg"><i class="icon-size-fullscreen"></i></a>
+                                </div>
+
+                                      <div class="easyzoom-style">
+                                          <div class="easyzoom easyzoom--overlay">
+                                              <a href="{{img.imageURL3}}">
+                                                  <img src="{{img.imageURL3}}" alt="">
+                                              </a>
+                                          </div>
+                                          <a class="easyzoom-pop-up img-popup" href="assets/images/product-details/b-large-4.jpg' %}"><i class="icon-size-fullscreen"></i></a>
+                                      </div>
+
+                                    <div class="easyzoom-style">
+                                        <div class="easyzoom easyzoom--overlay">
+                                            <a href="{{img.imageURL4}}">
+                                                <img src="{{img.imageURL4L}}" alt="">
+                                            </a>
+                                        </div>
+
+                                        <a class="easyzoom-pop-up img-popup" href="{% static 'assets/images/product-details/b-large-2.jpg' %}"><i class="icon-size-fullscreen"></i></a>
+                                    </div>
+                            {% endfor %}
+                            </div>
+
+
+
+                            <div class="product-dec-slider-small product-dec-small-style1">
+                                <div class="product-dec-small active">
+                                    <img src="{{products.product_image.url}}" alt="">
+                                </div>
+
+                            {% for img in products.get_sub_images %}
+
+
+                                {% if img.img1 %}
+
+                                    <div class="product-dec-small">
+                                        <img src="{{img.img1.url}}" alt="">
+                                    </div>
+                                {% endif %}
+
+                                {% if img.img2 %}
+                                    <div class="product-dec-small">
+                                        <img src="{{img.img2.url}}" alt="">
+                                    </div>
+                                {% endif %}
+
+
+
+                                {% if img.img3 %}
+
+                                    <div class="product-dec-small">
+                                        <img src="{{img.img3.url}}" alt="">
+                                    </div>
+                                {% endif %}
+
+                                {% if img.img4 %}
+                                    <div class="product-dec-small">
+                                        <img src="{{img.img4.url}}" alt="">
+                                    </div>
+                                {% endif %}
+
+
+                            {% endfor %}
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <div class="product-details-content pro-details-content-mrg">
+                            <h2>{{products.product_name}}</h2>
+                            <div class="product-ratting-review-wrap">
+                                <div class="product-ratting-digit-wrap">
+                                  <div class="product-rating-2">
+                                    <b><span class="rating" id='stars'> {{products.sum_rating}}</span></b>
+                                  </div>
+                                    <div class="product-digit">
+                                        <span>{{products.sum_rating}}</span>
+                                    </div>
+
+
+                                </div>
+                                <div class="product-review-order">
+                                    <span>{{products.get_count_reviews}} <span id="rating"> Review </span></span>
+                                    <span>{{products.get_total_order_product}} <span id="order"> Order </span></span>
+                                </div>
+                            </div>
+
+
+                            <script type="text/javascript">
+
+                              if ({{products.get_count_reviews}} > 1) {
+
+                                document.getElementById("rating").innerHTML = "Reviews";
+
+                              }
+
+                              if ({{products.get_total_order_product}} > 1) {
+
+                                document.getElementById("order").innerHTML = "Orders";
+
+                              }
+
+                            </script>
+
+                            <script>
+                                  // const btn = document.querySelector("button");
+                                  //var rated= $('#stars{{top_10.id}}').text();
+                                  //console.log(rated);
+
+                                  document.getElementById("stars").innerHTML = getStars({{products.sum_rating}});
+
+                                  function getStars(rating) {
+
+                                    // Round to nearest half
+                                    rating = Math.round(rating * 2) / 2;
+                                    let output = [];
+
+                                    // Append all the filled whole stars
+                                    for (var i = rating; i >= 1; i--)
+                                      output.push('<i class="fa fa-star" aria-hidden="true" style="color: #6AAE28;"></i>&nbsp;');
+
+                                    // If there is a half a star, append it
+                                    if (i == .5) output.push('<i class="fa fa-star-half-o" aria-hidden="true" style="color: #6AAE28;"></i>&nbsp;');
+
+                                    // Fill the empty stars
+                                    for (let i = (5 - rating); i >= 1; i--)
+                                      output.push('<i class="fa fa-star-o" aria-hidden="true" style="color: #6AAE28;"></i>&nbsp;');
+
+                                    return output.join('');
+
+                                  }
+                                </script>
+<!--                            <p>{{products.product_description}}</p>-->
+                            <div class="pro-details-price">
+                                <span class="new-price">{{products.price |floatformat:2}}</span>
+                                <span class="old-price">{{products.price |floatformat:2}}</span>
+                            </div>
+
+
+                            <div class="pro-details-color-wrap">
+                                <span>Color:</span>
+                                <div class="pro-details-color-content">
+                                    <ul>
+                                        <li><a class="dolly color" href="#">dolly</a></li>
+                                        <li><a class="white color" href="#">white</a></li>
+                                        <li><a class="azalea color" href="#">azalea</a></li>
+                                        <li><a class="peach-orange color" href="#">Orange</a></li>
+                                        <li><a class="mona-lisa active color" href="#">lisa</a></li>
+                                        <li><a class="cupid color" href="#">cupid</a></li>
+
+                                    </ul>
+                                </div>
+                            </div>
+
+<!--
+                                <script>
+                                    $('.color').click(function Getcolor(e){
+                                                    e.preventDefault();
+                                                    var color= ($(this).text())
+                                                    console.log(color)
+
+                                                  })
+                                    </script> -->
+
+
+                            <div class="pro-details-size">
+                                <span>Size:</span>
+                                <div class="pro-details-size-content">
+                                    <ul>
+                                        <li><a href="#">XS</a></li>
+                                        <li><a href="#">S</a></li>
+                                        <li><a href="#">M</a></li>
+                                        <li><a href="#">L</a></li>
+                                        <li><a href="#">XL</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+
+
+                            <div class="pro-details-quality">
+                                <span class="q">Quantity:</span>
+                                <div class="cart-plus-minus">
+                                    <input class="cart-plus-minus-box" type="text" name="qtybutton" value="1">
+                                </div>
+                            </div>
+
+
+                            <script type="text/javascript">
+
+
+                              $(document).ready(function functionName() {
+
+
+
+                                $('.inc').click(function functionName() {
+
+                                  console.log($(this).html());
+
+
+                                  $.ajax({
+
+                                   type: 'GET',
+                                   url: proces_add_to_cart,
+                                   data: {'color': 'dcolor'},
+                                   dataType: 'json',
+
+                                   success: function functionName(data) {
+
+
+                                     if (data.ananymous) {
+
+                                       alert('Anannymous user add to cart pending');
+
+                                     }else if (data.inc) {
+
+                                          const total= data.inc[1]
+                                          const product= data.inc[2]
+                                          console.log(total);
+                                          console.log(product);
+                                          // console.log(product);
+
+                                          $("#totalcart").html(total)
+                                          $("#totalcartx").html(total)
+                                          $("#snackbar2").html(product + ' updated successfully')
+
+                                            var x = document.getElementById("snackbar2");
+                                            x.className = "show";
+                                            setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+
+
+                                     }
+
+                                   }
+
+                                  })
+
+
+
+                                })
+
+                              })
+
+
+                              $(document).ready(function functionName() {
+
+                                $('.dec').click(function functionName() {
+
+                                  console.log($(this).html());
+
+                                  $.ajax({
+
+                                    url:decrease_cart,
+                                    type:'GET',
+                                    dataType: 'json',
+
+                                    success: function (data, status) {
+
+                                      if (data.sub) {
+
+                                        const total= data.sub[1]
+                                        console.log(total);
+
+                                      console.log(data, status);
+
+                                      $("#totalcart").html(total)
+                                      $("#totalcartx").html(total)
+
+                                      var x = document.getElementById("snackbar2");
+                                      x.className = "show";
+                                      setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+
+                                    }else if (data.valu) {
+
+
+                                        var x = $("#snackbar3");
+                                        x.className = "show";
+                                        setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+
+                                      console.log('data');
+
+                                    }
+
+
+                                    }
+
+
+                                  })
+
+                                })
+
+                              })
+
+                            </script>
+
+
+                            <div id="snackbar">Item added to cart</div>
+                            <div id="snackbar2"></div>
+
+                            <div id="snackbar3">item cant go lower than one</div>
+
+
+
+<!--                            <div class="product-details-meta">-->
+<!--                                <ul>-->
+<!--                                    <li><span>Categories:</span> <a href="#">Woman,</a> <a href="#">Dress,</a> <a href="#">T-Shirt</a></li>-->
+<!--                                    <li><span id="tag"> Tag: </span> <a href="#">Fashion,</a> <a href="#">Mentone</a> , <a href="#">Texas</a></li>-->
+<!--                                </ul>-->
+<!--                            </div>-->
+                            <div class="pro-details-action-wrap">
+<!--                                <div class="pro-details-add-to-cart">-->
+<!--                                    <a  class="add-to-cart" title="Add to Cart" href="{{products.get_add_to_cart}}">Add To Cart </a>-->
+<!--                                </div>-->
+                                <div class="pro-details-add-to-cart">
+                                    <button id="addtocartbtn"  title="Add to Cart" href="">Add To Cart </button>
+                                </div>
+
+                                <div class="pro-details-action">
+                                    <a title="Add to Wishlist" href="#"><i class="icon-heart"></i></a>
+                                    <a title="Add to Compare" href="{% url 'rate' products.slug %}"><i class="icon-star"></i></a>
+                                    <a class="social" title="Social" href="#"><i class="icon-share"></i></a>
+                                    <div class="product-dec-social">
+                                        <a class="facebook" title="Facebook" href="#"><i class="icon-social-facebook"></i></a>
+                                        <a class="twitter" title="Twitter" href="#"><i class="icon-social-twitter"></i></a>
+                                        <a class="instagram" title="Instagram" href="#"><i class="icon-social-instagram"></i></a>
+                                        <a class="pinterest" title="Pinterest" href="#"><i class="icon-social-pinterest"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <script type="text/javascript">
+
+        var proces_add_to_cart= '{{products.get_add_to_cart}}'
+        var dec= '{{products.get_decrease_qty}}'
+        console.log('thissss '+ dec);
+        var decrease_cart= "{% url 'decrease' products.slug %}"
+        console.log(proces_add_to_cart);
+        console.log( decrease_cart);
+        </script>
+
+
+
+        <div class="description-review-wrapper pb-110">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="dec-review-topbar nav mb-45">
+                            <a class="active" data-toggle="tab" href="#des-details1">Description</a>
+                            <a data-toggle="tab" href="#des-details2">Specification</a>
+                            <a data-toggle="tab" href="#des-details3">Meterials </a>
+                            <a data-toggle="tab" href="#des-details4">Reviews and Ratting </a>
+                        </div>
+                        <div class="tab-content dec-review-bottom">
+                            <div id="des-details1" class="tab-pane active">
+                                <div class="description-wrap">
+                                    <p>{{products.product_description}}</p>
+                                </div>
+                            </div>
+                            <div id="des-details2" class="tab-pane">
+                                <div class="specification-wrap table-responsive">
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td class="title width1">Name</td>
+                                                <td>Salwar Kameez</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="title width1">SKU</td>
+                                                <td>0x48e2c</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="title width1">Models</td>
+                                                <td>FX 829 v1</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="title width1">Categories</td>
+                                                <td>Digital Print</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="title width1">Size</td>
+                                                <td>60’’ x 40’’</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="title width1">Brand </td>
+                                                <td>Individual Collections</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="title width1">Color</td>
+                                                <td>Black, White</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div id="des-details3" class="tab-pane">
+                                <div class="specification-wrap table-responsive">
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td class="title width1">Top</td>
+                                                <td>Cotton Digital Print Chain Stitch Embroidery Work</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="title width1">Bottom</td>
+                                                <td>Cotton Cambric</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="title width1">Dupatta</td>
+                                                <td>Digital Printed Cotton Malmal With Chain Stitch</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div id="des-details4" class="tab-pane">
+                                <div class="review-wrapper">
+                                    <!-- <h2>1 review for Sleeve Button Cowl Neck</h2> -->
+                                    <div class="single-review">
+                                        <div class="review-img">
+                                            <img src="assets/images/product-details/client-1.png" alt="">
+                                        </div>
+                                        <div class="review-content">
+
+                                          {% for reviews in products.get_user_reviews %}
+
+                                            <div class="review-rating">
+                                              <span class="rating" id='stars_reviews{{reviews.id}}'>{{reviews.rating}}</span>
+                                            </div>
+
+                                            <div class="review-top-wrap">
+                                                <div class="review-name">
+                                                    <h5><span>{{reviews.user}}</span> - {{reviews.date_added}}</h5><br>
+
+
+                                                            <script>
+                                                                        // const btn = document.querySelector("button");
+                                                                        //var rated= $('#stars{{top_10.id}}').text();
+                                                                        //console.log(rated);
+
+                                                                        document.getElementById("stars_reviews{{reviews.id}}").innerHTML = getStars({{reviews.rating}});
+
+                                                                        function getStars(rating) {
+
+                                                                          // Round to nearest half
+                                                                          rating = Math.round(rating * 2) / 2;
+                                                                          let output = [];
+
+                                                                          // Append all the filled whole stars
+                                                                          for (var i = rating; i >= 1; i--)
+                                                                            output.push('<i class="fa fa-star" aria-hidden="true" style="color: #6AAE28;"></i>&nbsp;');
+
+                                                                          // If there is a half a star, append it
+                                                                          if (i == .5) output.push('<i class="fa fa-star-half-o" aria-hidden="true" style="color: #6AAE28;"></i>&nbsp;');
+
+                                                                          // Fill the empty stars
+                                                                          for (let i = (5 - rating); i >= 1; i--)
+                                                                            output.push('<i class="fa fa-star-o" aria-hidden="true" style="color: #6AAE28;"></i>&nbsp;');
+
+                                                                          return output.join('');
+
+                                                                        }
+                                                                </script>
+
+                                                </div>
+
+                                                <!-- <div class="review-rating">
+                                                    <i class="yellow icon_star"></i>
+                                                    <i class="yellow icon_star"></i>
+                                                    <i class="yellow icon_star"></i>
+                                                    <i class="yellow icon_star"></i>
+                                                    <i class="yellow icon_star"></i>
+                                                </div> -->
+                                            </div>
+                                            <p>{{reviews.your_review}}</p>
+                                            <hr>
+
+                                            {% empty %}
+                                                <p>This product has no review yet</p>
+
+                                          {% endfor %}
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ratting-form-wrapper">
+                                    <span>Add a Review</span>
+                                    <div class="ratting-form">
+                                        <form action="{%url 'process_review' products.slug %}" method="post">
+                                            <div class="row">
+
+                                              {% csrf_token %}
+                                                <!-- <div class="col-lg-6 col-md-6">
+                                                    <div class="rating-form-style mb-20">
+                                                        <label>Name <span>*</span></label>
+                                                        <input type="text">
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6 col-md-6">
+                                                    <div class="rating-form-style mb-20">
+                                                        <label>Email <span>*</span></label>
+                                                        <input type="email">
+                                                    </div>
+                                                </div> -->
+                                                <!-- <div class="col-lg-12">
+                                                    <div class="star-box-wrap">
+                                                        <div class="single-ratting-star">
+                                                            <a href="#"><i class="icon_star"></i></a>
+                                                        </div>
+                                                        <div class="single-ratting-star">
+                                                            <a href="#"><i class="icon_star"></i></a>
+                                                            <a href="#"><i class="icon_star"></i></a>
+                                                        </div>
+                                                        <div class="single-ratting-star">
+                                                            <a href="#"><i class="icon_star"></i></a>
+                                                            <a href="#"><i class="icon_star"></i></a>
+                                                            <a href="#"><i class="icon_star"></i></a>
+                                                        </div>
+                                                        <div class="single-ratting-star">
+                                                            <a href="#"><i class="icon_star"></i></a>
+                                                            <a href="#"><i class="icon_star"></i></a>
+                                                            <a href="#"><i class="icon_star"></i></a>
+                                                            <a href="#"><i class="icon_star"></i></a>
+                                                        </div>
+                                                        <div class="single-ratting-star">
+                                                            <a href="#"><i class="icon_star"></i></a>
+                                                            <a href="#"><i class="icon_star"></i></a>
+                                                            <a href="#"><i class="icon_star"></i></a>
+                                                            <a href="#"><i class="icon_star"></i></a>
+                                                            <a href="#"><i class="icon_star"></i></a>
+                                                        </div>
+                                                    </div>
+                                                </div> -->
+                                                <div class="col-md-12">
+                                                    <div class="rating-form-style mb-20">
+                                                        <label>Your review <span>*</span></label>
+                                                        <textarea name="review"></textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-12">
+                                                    <div class="form-submit">
+                                                        <input type="submit" value="Submit">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="related-product pb-115">
+            <div class="container">
+                <div class="section-title mb-45 text-center">
+                    <h2>Related Product</h2>
+                </div>
+
+
+                <div class="related-product-active">
+
+                  {% for related_product in related_product %}
+                    <div class="product-plr-1">
+                        <div class="single-product-wrap">
+                            <div class="product-img product-img-zoom mb-15">
+                                <a href="product-details.html">
+                                    <img src="{{related_product.product_image.url}}" alt="">
+                                </a>
+                                <div class="product-action-2 tooltip-style-2">
+                                    <button title="Wishlist"><i class="icon-heart"></i></button>
+                                    <button title="Quick View" data-toggle="modal" data-target="#exampleModal"><i class="icon-size-fullscreen icons"></i></button>
+                                    <button title="Compare"><i class="icon-refresh"></i></button>
+                                </div>
+                            </div>
+                            <div class="product-content-wrap-2 text-center">
+                                <div class="product-rating-wrap">
+                                    <div class="product-rating">
+                                      <span class="rating" id='stars_related{{related_product.id}}'>{{reviews.sum_rating}}</span>
+
+                                    </div>
+                                    <span>({{related_product.sum_rating}})</span>
+                                </div>
+                                <h3><a href="{{related_product.get_absolute_url }}">{{related_product.product_name}}</a></h3>
+                                <div class="product-price-2">
+                                    <span>{{related_product.price}}</span>
+                                </div>
+                            </div>
+                            <div class="product-content-wrap-2 product-content-position text-center">
+                                <div class="product-rating-wrap">
+                                    <div class="product-rating">
+                                      <span class="rating" id='stars_related2{{related_product.id}}'>{{reviews.sum_rating}}</span>
+
+                                    </div>
+                                    <span>({{related_product.sum_rating}})</span>
+                                </div>
+                                <h3><a href="{{related_product.get_absolute_url }}">{{related_product.product_name}}</a></h3>
+                                <div class="product-price-2">
+                                    <span>$20.50</span>
+                                </div>
+                                <div class="pro-add-to-cart">
+                                    <button id="add_relatedto_cart{{related_product.id}}" title="Add to Cart">Add To Cart</button>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                      <script>
+
+                              $('button#add_relatedto_cart{{related_product.id}}').click(function functionName() {
+
+                                var url = ('{{related_product.get_add_to_cart }}');
+
+                                console.log(url);
+
+
+                                $.ajax({
+
+                                  url: url,
+                                  type: 'get',
+                                  dataType: 'json',
+
+
+
+                                  success: function functionName(data) {
+
+
+                                    if ( data.added) {
+                                      console.log(data);
+
+
+
+                                      const total = data.added[1]
+                                        var products = data.added[2]
+                                        console.log(total)
+
+                                          $("#totalcart").html(total)
+                                          $("#totalcartx").html(total)
+                                          $("#snackbar").html(products + ' added to cart')
+
+
+                                          var x = document.getElementById("snackbar");
+                                          x.className = "show";
+                                          setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+
+                                    }
+
+                                    else if (data.inc) {
+
+                                      console.log(data);
+
+                                        const total = data.inc[1]
+                                        const product= data.inc[2]
+                                        console.log(total);
+                                        console.log(product);
+                                        // console.log(product);
+
+                                        $("#totalcart").html(total)
+                                        $("#totalcartx").html(total)
+                                        $("#snackbar2").html(product + ' updated successfully')
+
+                                          var x = document.getElementById("snackbar2");
+                                          x.className = "show";
+                                          setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+
+
+
+                                    }
+                                    else {
+                                      data.ananymous
+                                      alert(' Anannymous user add to cart pending');
+                                    }
+
+
+                                  }
+
+
+
+
+                                })
+
+
+                              })
+                        // const btn = document.querySelector("button");
+                        //var rated= $('#stars{{top_10.id}}').text();
+                        //console.log(rated);
+
+                        document.getElementById("stars_related{{related_product.id}}").innerHTML = getStars({{related_product.sum_rating}});
+
+                        function getStars(rating) {
+
+                          // Round to nearest half
+                          rating = Math.round(rating * 2) / 2;
+                          let output = [];
+
+                          // Append all the filled whole stars
+                          for (var i = rating; i >= 1; i--)
+                            output.push('<i class="fa fa-star" aria-hidden="true" style="color: #6AAE28;"></i>&nbsp;');
+
+                          // If there is a half a star, append it
+                          if (i == .5) output.push('<i class="fa fa-star-half-o" aria-hidden="true" style="color: #6AAE28;"></i>&nbsp;');
+
+                          // Fill the empty stars
+                          for (let i = (5 - rating); i >= 1; i--)
+                            output.push('<i class="fa fa-star-o" aria-hidden="true" style="color: #6AAE28;"></i>&nbsp;');
+
+                          return output.join('');
+
+                        }
+
+
+
+                        document.getElementById("stars_related2{{related_product.id}}").innerHTML = getStars({{related_product.sum_rating}});
+
+                        function getStars(rating) {
+
+                          // Round to nearest half
+                          rating = Math.round(rating * 2) / 2;
+                          let output = [];
+
+                          // Append all the filled whole stars
+                          for (var i = rating; i >= 1; i--)
+                            output.push('<i class="fa fa-star" aria-hidden="true" style="color: #6AAE28;"></i>&nbsp;');
+
+                          // If there is a half a star, append it
+                          if (i == .5) output.push('<i class="fa fa-star-half-o" aria-hidden="true" style="color: #6AAE28;"></i>&nbsp;');
+
+                          // Fill the empty stars
+                          for (let i = (5 - rating); i >= 1; i--)
+                            output.push('<i class="fa fa-star-o" aria-hidden="true" style="color: #6AAE28;"></i>&nbsp;');
+
+                          return output.join('');
+
+                        }
+                      </script>
+
+
+
+
+
+
+
+
+                    </div>
+
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- The Modal for showung messages -->
+              <div class="modal fade" id="add_to_cart_modal">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                      <h4 class="modal-title"></h4>
+                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+
+                    <!-- Modal body -->
+                    <div class="addtocart-body">
+                      <div class="container">
+                        <p>Item Added to Cart</p>
+                      </div>
+                    </div>
+
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-danger cs" style="background:green" data-dismiss="modal">Continue Shoping</button>
+                      <button type="button" class="btn btn-danger co" style="background: #000" data-dismiss="modal">Check out</button>
+
+                    </div>
+
+
+                  </div>
+                </div>
+              </div>
+
+{% endblock %}

@@ -1,0 +1,174 @@
+<!doctype html>
+{% extends 'rapp/base.html' %}
+
+
+
+{% block head_slide %}
+    <header class="top-area single-page about-page" id="home">
+{% endblock %}
+
+
+
+{% block bg %}
+    <div class="page-barner-bg"></div>
+{% endblock %}
+
+
+
+
+
+{% block banner %}
+        <!--PAGE BARNER AREA-->
+        <div class="page-barner-area">
+            <div class="container wow fadeIn">
+                <div class="row">
+                    <div class="col-md-12 col-xs-12">
+                        <div class="barner-text">
+                            <h1><span>Resrevation</span></h1>
+                            <ul class="page-location">
+                                <li><a href="{% url 'home' %}">Home</a></li>
+                                <li><i class="fa fa-angle-right"></i></li>
+                                <li class="active"><a href="{% url 'reservation' %}">Reservation</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--PAGE BARNER AREA END-->
+
+{% endblock %}
+
+{% block content %}
+    <!--RESERVATION AREA-->
+    <section class="reservation-area home-three section-padding">
+        <div class="container wow fadeIn">
+            <div class="row">
+                <div class="col-md-12 col-lg-12">
+                    <div class="area-title text-center">
+                        <h2>Resrevation Form</h2>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+            <div class="row">
+                <div class="col-md-8 col-lg-8 col-md-offset-2 col-lg-offset-2 col-sm-12 col-xs-12">
+                    <form class="main-reservaton-form" action="#" method="post">
+                        {% csrf_token %}
+                        <div class="row">
+                            {% for errors in form.non_field_errors %}
+                            <h5 class="" style="color:#ff9494" align="">
+                                <i class="fa fa-exclamation-circle"> {{ errors|striptags }}</i>
+                            </h5>
+                            {% endfor %}
+
+                            <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
+                                <label for="reservation_date"><i class="fa fa-calendar"></i></label>
+                                {{form.expected_date}}
+                            </div>
+                            <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
+                                <label for="reservation_time"><i class="fa fa-clock-o"></i></label>
+                                {{form.expected_time}}
+                            </div>
+                            <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+                                <label for="reservation_person"><i class="fa fa-user-plus"></i></label>
+                                {{form.total_person}}
+                            </div>
+                            <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+                                <label for="reservation_phone"><i class="fa fa-envelope"></i></label>
+                                {{form.message}}
+                            </div>
+
+                                <button type="submit">BOOK MY TABLE</button>
+                                <p>Please submit your reservation detail & We'll contact you to confirm your booking</p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
+                    <div class="reservation-call-to-action">
+                        <h4>Reserve by Phone</h4>
+                        <p>We take reservations for lunch and dinner. To make a reservation, please call us at <a href="#">(080)-1234-678</a> between 09am-7pm, Monday to Friday.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
+                    <div class="reservation-private-text">
+                        <h4>Private Parties & Events</h4>
+                        <p>We are honored to serve you a special day, great in your life such as birthday parties, weddings, conferences or meeting friends. If the size of the party, the event over 15 wheels, please let us know soon.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--RESERVATION AREA END-->
+
+
+
+{% endblock %}
+
+<!--            <div class="row">-->
+<!--                <div class="col-md-8 col-lg-8 col-md-offset-2 col-lg-offset-2 col-sm-12 col-xs-12">-->
+<!--                    <form class="main-reservaton-form" action="#" method="post">-->
+<!--                        <div class="row">-->
+<!--                            <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">-->
+<!--                                <label for="reservation_name"><i class="fa fa-user-o"></i></label>-->
+<!--                                <input type="text" name="reservation_name" id="reservation_name" placeholder="Your Name">-->
+<!--                            </div>-->
+<!--                            <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">-->
+<!--                                <label for="reservation_email"><i class="fa fa-envelope-o"></i></label>-->
+<!--                                <input type="email" name="reservation_email" id="reservation_email" placeholder="Your Email">-->
+<!--                            </div>-->
+<!--                            <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">-->
+<!--                                <label for="reservation_date"><i class="fa fa-calendar"></i></label>-->
+<!--                                <input type="text" name="reservation_date" id="reservation_date" placeholder="Expected Date" data-select="datepicker">-->
+<!--                            </div>-->
+<!--                            <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">-->
+<!--                                <label for="reservation_time"><i class="fa fa-clock-o"></i></label>-->
+<!--                                <input type="text" name="reservation_time" id="reservation_time" placeholder="Expected Time">-->
+<!--                            </div>-->
+<!--                            <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">-->
+<!--                                <label for="reservation_person"><i class="fa fa-user-plus"></i></label>-->
+<!--                                <input type="text" name="reservation_person" id="reservation_person" placeholder="Total Person">-->
+<!--                            </div>-->
+<!--                            <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">-->
+<!--                                <label for="reservation_phone"><i class="fa fa-phone"></i></label>-->
+<!--                                <input type="text" name="reservation_phone" id="reservation_phone" placeholder="Phone No">-->
+<!--                            </div>-->
+<!--                            <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">-->
+<!--                                <label for="reservation_message"><i class="fa fa-comment-o"></i></label>-->
+<!--                                <textarea name="reservation_message" id="reservation_message" cols="30" rows="10"></textarea>-->
+<!--                            </div>-->
+<!--                            <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 text-center">-->
+<!--                                <button type="submit">BOOK MY TABLE</button>-->
+<!--                                <p>Please submit your reservation detail & We'll contact you to confirm your booking</p>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </form>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="row">-->
+<!--                <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">-->
+<!--                    <div class="reservation-call-to-action">-->
+<!--                        <h4>Reserve by Phone</h4>-->
+<!--                        <p>We take reservations for lunch and dinner. To make a reservation, please call us at <a href="#">(080)-1234-678</a> between 09am-7pm, Monday to Friday.</p>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">-->
+<!--                    <div class="reservation-private-text">-->
+<!--                        <h4>Private Parties & Events</h4>-->
+<!--                        <p>We are honored to serve you a special day, great in your life such as birthday parties, weddings, conferences or meeting friends. If the size of the party, the event over 15 wheels, please let us know soon.-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </section>-->
+<!--    &lt;!&ndash;RESERVATION AREA END&ndash;&gt;-->
+
+
+

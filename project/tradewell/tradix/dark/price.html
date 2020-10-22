@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!-- Mirrored from quixlab.com/demo/tradix/dark/price.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 13 Oct 2020 10:54:50 GMT -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tradix</title>
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon.png">
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="vendor/nice-select/css/nice-select.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div id="preloader">
+        <div class="sk-three-bounce">
+            <div class="sk-child sk-bounce1"></div>
+            <div class="sk-child sk-bounce2"></div>
+            <div class="sk-child sk-bounce3"></div>
+        </div>
+    </div>
+
+    <div id="main-wrapper">
+
+
+        <div class="header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="navigation">
+                            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                                <a class="navbar-brand" href="index.html"><img src="images/logo.png" alt=""></a>
+                                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                                    data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"
+                                    aria-expanded="false" aria-label="Toggle navigation">
+                                    <span class="navbar-toggler-icon"></span>
+                                </button>
+                                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                                    <ul class="navbar-nav">
+
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Home
+                                            </a>
+                                            <div class="dropdown-menu">
+                                                <a class="dropdown-item" href="index.html">Home 1</a>
+                                                <a class="dropdown-item" href="index2.html">Home 2</a>
+                                            </div>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="price.html">Price</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="wallet.html">Wallet</a>
+                                        </li>
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Company
+                                            </a>
+                                            <div class="dropdown-menu">
+                                                <a class="dropdown-item" href="about.html">About us</a>
+                                                <a class="dropdown-item" href="team.html">Team</a>
+                                                <a class="dropdown-item" href="blog.html">Blog</a>
+                                                <a class="dropdown-item" href="career.html">Career</a>
+                                            </div>
+                                        </li>
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Support
+                                            </a>
+                                            <div class="dropdown-menu">
+                                                <a class="dropdown-item" href="contact.html">Contact us</a>
+                                                <a class="dropdown-item" href="helpdesk.html">Help Desk</a>
+                                                <a class="dropdown-item" href="faq.html">FAQ</a>
+                                            </div>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="dashboard.html">Dashboard</a>
+                                        </li>
+                                        <li class="nav-item signin-btn">
+                                            <a class="nav-link btn btn-primary" href="signin.html">Sign in</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div class="pricing section-padding">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-xl-12">
+                        <div class="coin-search">
+                            <div class="search-box">
+                                <form action="#">
+                                    <input type="text" class="form-control" placeholder="Search Coin">
+                                    <button class="btn btn-primary">Search</button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="sort-view">
+                            <div class="search-timeline">
+                                <a href="#" class="active">1H</a>
+                                <a href="#">24H</a>
+                                <a href="#">1W</a>
+                                <a href="#">1M</a>
+                                <a href="#">1Y</a>
+                            </div>
+                            <div class="coin-view">
+                                <ul class="nav nav-pills" id="pills-tab" role="tablist">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" data-toggle="pill" href="#grid-view">
+                                            <i class="mdi mdi-view-grid"></i>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" data-toggle="pill" href="#list-view">
+                                            <i class="mdi mdi-view-sequential"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-xl-12">
+                        <div class="tab-content">
+                            <div class="tab-pane fade show active" id="grid-view">
+                                <div class="price-grid">
+                                    <div class="row">
+                                        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+                                            <div class="card">
+                                                <div class="card-header">
+                                                    <div class="media">
+                                                        <span><i class="cc BTC"></i></span>
+                                                        <div class="media-body">
+                                                            Bitcoin
+                                                        </div>
+                                                    </div>
+                                                    <p class="mb-0"> 24h</p>
+                                                </div>
+                                                <div class="card-body">
+                                                    <h3>USD 62,548.2254</h3>
+                                                    <span class="text-success">+2.05%</span>
+                                                    <div id="btcChart"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+                                            <div class="card">
+                                                <div class="card-header">
+                                                    <div class="media">
+                                                        <span><i class="cc LTC"></i></span>
+                                                        <div class="media-body">
+                                                            Bitcoin
+                                                        </div>
+                                                    </div>
+                                                    <p class="mb-0"> 24h</p>
+                                                </div>
+                                                <div class="card-body">
+                                                    <h3>USD 62,548.2254</h3>
+                                                    <span class="text-success">+2.05%</span>
+                                                    <div id="ltcChart"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+                                            <div class="card">
+                                                <div class="card-header">
+                                                    <div class="media">
+                                                        <span><i class="cc DASH"></i></span>
+                                                        <div class="media-body">
+                                                            Bitcoin
+                                                        </div>
+                                                    </div>
+                                                    <p class="mb-0"> 24h</p>
+                                                </div>
+                                                <div class="card-body">
+                                                    <h3>USD 62,548.2254</h3>
+                                                    <span class="text-success">+2.05%</span>
+                                                    <div id="dashChart"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+                                            <div class="card">
+                                                <div class="card-header">
+                                                    <div class="media">
+                                                        <span><i class="cc XRP"></i></span>
+                                                        <div class="media-body">
+                                                            Ripple
+                                                        </div>
+                                                    </div>
+                                                    <p class="mb-0"> 24h</p>
+                                                </div>
+                                                <div class="card-body">
+                                                    <h3>USD 62,548.2254</h3>
+                                                    <span class="text-success">+2.05%</span>
+                                                    <div id="xrpChart"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+                                            <div class="card">
+                                                <div class="card-header">
+                                                    <div class="media">
+                                                        <span><i class="cc ETH"></i></span>
+                                                        <div class="media-body">
+                                                            Bitcoin
+                                                        </div>
+                                                    </div>
+                                                    <p class="mb-0"> 24h</p>
+                                                </div>
+                                                <div class="card-body">
+                                                    <h3>USD 62,548.2254</h3>
+                                                    <span class="text-success">+2.05%</span>
+                                                    <div id="ethChart"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+                                            <div class="card">
+                                                <div class="card-header">
+                                                    <div class="media">
+                                                        <span><i class="cc USDT"></i></span>
+                                                        <div class="media-body">
+                                                            Tether
+                                                        </div>
+                                                    </div>
+                                                    <p class="mb-0"> 24h</p>
+                                                </div>
+                                                <div class="card-body">
+                                                    <h3>USD 62,548.2254</h3>
+                                                    <span class="text-success">+2.05%</span>
+                                                    <div id="usdtChart"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+                                            <div class="card">
+                                                <div class="card-header">
+                                                    <div class="media">
+                                                        <span><i class="cc EOS"></i></span>
+                                                        <div class="media-body">
+                                                            Eosio
+                                                        </div>
+                                                    </div>
+                                                    <p class="mb-0"> 24h</p>
+                                                </div>
+                                                <div class="card-body">
+                                                    <h3>USD 62,548.2254</h3>
+                                                    <span class="text-success">+2.05%</span>
+                                                    <div id="eosChart"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+                                            <div class="card">
+                                                <div class="card-header">
+                                                    <div class="media">
+                                                        <span><i class="cc XTZ"></i></span>
+                                                        <div class="media-body">
+                                                            Tezos
+                                                        </div>
+                                                    </div>
+                                                    <p class="mb-0"> 24h</p>
+                                                </div>
+                                                <div class="card-body">
+                                                    <h3>USD 62,548.2254</h3>
+                                                    <span class="text-success">+2.05%</span>
+                                                    <div id="xtzChart"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="list-view">
+                                <div class="market-table">
+                                    <div class="table-responsive">
+                                        <table class="table mb-0 table-responsive-sm">
+                                            <thead>
+                                                <tr>
+                                                    <th>#</th>
+                                                    <th>Name</th>
+                                                    <th>Price</th>
+                                                    <th>Change</th>
+                                                    <th>Chart</th>
+                                                    <th>Trade</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>1
+                                                    </td>
+                                                    <td class="coin_icon">
+                                                        <i class="cc BTC"></i>
+                                                        <span>Bitcoin <b>BTC</b></span>
+                                                    </td>
+
+                                                    <td>
+                                                        USD 680,175.06
+                                                    </td>
+                                                    <td>
+                                                        <span class="text-success">+1.13%</span>
+                                                    </td>
+                                                    <td> <span class="sparkline8"></span></td>
+                                                    <td><a href="#" class="btn btn-success">Buy</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2
+                                                    </td>
+                                                    <td class="coin_icon">
+                                                        <i class="cc ETH"></i>
+                                                        <span>Ethereum <b>ETH</b></span>
+                                                    </td>
+
+                                                    <td>
+                                                        USD 680,175.06
+                                                    </td>
+                                                    <td>
+                                                        <span class="text-success">+1.13%</span>
+                                                    </td>
+                                                    <td> <span class="sparkline8"></span></td>
+                                                    <td><a href="#" class="btn btn-success">Buy</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>3
+                                                    </td>
+                                                    <td class="coin_icon">
+                                                        <i class="cc BCH-alt"></i>
+                                                        <span>Bitcoin Cash <b>BCH</b></span>
+                                                    </td>
+
+                                                    <td>
+                                                        USD 680,175.06
+                                                    </td>
+                                                    <td>
+                                                        <span class="text-success">+1.13%</span>
+                                                    </td>
+                                                    <td> <span class="sparkline8"></span></td>
+                                                    <td><a href="#" class="btn btn-success">Buy</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>4
+                                                    </td>
+                                                    <td class="coin_icon">
+                                                        <i class="cc LTC"></i>
+                                                        <span>Litecoin <b>LTC</b></span>
+                                                    </td>
+
+                                                    <td>
+                                                        USD 680,175.06
+                                                    </td>
+                                                    <td>
+                                                        <span class="text-danger">-0.47%</span>
+                                                    </td>
+                                                    <td> <span class="sparkline8"></span></td>
+                                                    <td><a href="#" class="btn btn-success">Buy</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1
+                                                    </td>
+                                                    <td class="coin_icon">
+                                                        <i class="cc BTC"></i>
+                                                        <span>Bitcoin <b>BTC</b></span>
+                                                    </td>
+
+                                                    <td>
+                                                        USD 680,175.06
+                                                    </td>
+                                                    <td>
+                                                        <span class="text-success">+1.13%</span>
+                                                    </td>
+                                                    <td> <span class="sparkline8"></span></td>
+                                                    <td><a href="#" class="btn btn-success">Buy</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2
+                                                    </td>
+                                                    <td class="coin_icon">
+                                                        <i class="cc ETH"></i>
+                                                        <span>Ethereum <b>ETH</b></span>
+                                                    </td>
+
+                                                    <td>
+                                                        USD 680,175.06
+                                                    </td>
+                                                    <td>
+                                                        <span class="text-success">+1.13%</span>
+                                                    </td>
+                                                    <td> <span class="sparkline8"></span></td>
+                                                    <td><a href="#" class="btn btn-success">Buy</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>3
+                                                    </td>
+                                                    <td class="coin_icon">
+                                                        <i class="cc BCH-alt"></i>
+                                                        <span>Bitcoin Cash <b>BCH</b></span>
+                                                    </td>
+
+                                                    <td>
+                                                        USD 680,175.06
+                                                    </td>
+                                                    <td>
+                                                        <span class="text-success">+1.13%</span>
+                                                    </td>
+                                                    <td> <span class="sparkline8"></span></td>
+                                                    <td><a href="#" class="btn btn-success">Buy</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>4
+                                                    </td>
+                                                    <td class="coin_icon">
+                                                        <i class="cc LTC"></i>
+                                                        <span>Litecoin <b>LTC</b></span>
+                                                    </td>
+
+                                                    <td>
+                                                        USD 680,175.06
+                                                    </td>
+                                                    <td>
+                                                        <span class="text-danger">-0.47%</span>
+                                                    </td>
+                                                    <td> <span class="sparkline8"></span></td>
+                                                    <td><a href="#" class="btn btn-success">Buy</a></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div class="bottom section-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-6">
+                        <div class="bottom-logo">
+                            <img class="pb-3" src="images/logo-white.png" alt="">
+
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-lg-2 col-md-6 col-sm-6 col-6">
+                        <div class="bottom-widget">
+                            <h4 class="widget-title">Company</h4>
+                            <ul>
+                                <li><a href="#">About</a></li>
+                                <li><a href="#">Career</a></li>
+                                <li><a href="#">Affiliate</a></li>
+                                <li><a href="#">Our Partner</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-lg-2 col-md-6 col-sm-6 col-6">
+                        <div class="bottom-widget">
+                            <h4 class="widget-title">Support</h4>
+                            <ul>
+                                <li><a href="#">Ticket</a></li>
+                                <li><a href="#">FAQ</a></li>
+                                <li><a href="#">Blog</a></li>
+                                <li><a href="#">Helpdesk</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-6">
+                        <div class="bottom-widget">
+                            <h4 class="widget-title">Exchange Pair</h4>
+                            <div class="row">
+                                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6">
+                                    <ul>
+                                        <li><a href="#">ETH to BTC</a></li>
+                                        <li><a href="#">BTC to ETH</a></li>
+                                        <li><a href="#">LTC to ETH</a></li>
+                                        <li><a href="#">USDT to BTC</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6">
+                                    <ul>
+                                        <li><a href="#">BTC to USDT</a></li>
+                                        <li><a href="#">LTC to BTC</a></li>
+                                        <li><a href="#">XMR to BTC</a></li>
+                                        <li><a href="#">ETC to DASH</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-6">
+                        <div class="copyright">
+                            <p>© Copyright 2019 <a href="#">Tradix</a> I All Rights Reserved</p>
+                        </div>
+                    </div>
+                    <div class="col-xl-6">
+                        <div class="footer-social">
+                            <ul>
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--removeIf(production)-->
+        <!--**********************************
+            Right sidebar start
+        ***********************************-->
+        <div class="sidebar-right">
+            <a class="sidebar-right-trigger" href="javascript:void(0)">
+                <span><i class="fa fa-cog fa-spin"></i></span>
+            </a>
+            <div class="sidebar-right-inner">
+                <div class="admin-settings">
+                    <div class="opt-background">
+                        <p>Font Family</p>
+                        <select class="form-control" name="theme_font" id="theme_font">
+                            <option value="nunito">Nunito</option>
+                            <option value="opensans">Open Sans</option>
+
+                        </select>
+                    </div>
+                    <div>
+                        <p>Primary Color</p>
+                        <div class="opt-nav-header-color">
+                            <span>
+                                <input type="radio" name="navigation_header" value="color_1"
+                                    class="filled-in chk-col-primary" id="nav_header_color_1" />
+                                <label for="nav_header_color_1"></label>
+                            </span>
+                            <span>
+                                <input type="radio" name="navigation_header" value="color_2"
+                                    class="filled-in chk-col-primary" id="nav_header_color_2" />
+                                <label for="nav_header_color_2"></label>
+                            </span>
+                            <span>
+                                <input type="radio" name="navigation_header" value="color_3"
+                                    class="filled-in chk-col-primary" id="nav_header_color_3" />
+                                <label for="nav_header_color_3"></label>
+                            </span>
+                            <span>
+                                <input type="radio" name="navigation_header" value="color_4"
+                                    class="filled-in chk-col-primary" id="nav_header_color_4" />
+                                <label for="nav_header_color_4"></label>
+                            </span>
+                            <span>
+                                <input type="radio" name="navigation_header" value="color_5"
+                                    class="filled-in chk-col-primary" id="nav_header_color_5" />
+                                <label for="nav_header_color_5"></label>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="opt-header-color">
+                        <p>Background Color</p>
+                        <div>
+                            <span>
+                                <input type="radio" name="header_bg" value="color_1" class="filled-in chk-col-primary"
+                                    id="header_color_1">
+                                <label for="header_color_1"></label>
+                            </span>
+                            <span>
+                                <input type="radio" name="header_bg" value="color_2" class="filled-in chk-col-primary"
+                                    id="header_color_2">
+                                <label for="header_color_2"></label>
+                            </span>
+                            <span>
+                                <input type="radio" name="header_bg" value="color_3" class="filled-in chk-col-primary"
+                                    id="header_color_3">
+                                <label for="header_color_3"></label>
+                            </span>
+                            <span>
+                                <input type="radio" name="header_bg" value="color_4" class="filled-in chk-col-primary"
+                                    id="header_color_4">
+                                <label for="header_color_4"></label>
+                            </span>
+                            <span>
+                                <input type="radio" name="header_bg" value="color_5" class="filled-in chk-col-primary"
+                                    id="header_color_5">
+                                <label for="header_color_5"></label>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--**********************************
+            Right sidebar end
+        ***********************************-->
+        <!--endRemoveIf(production)-->
+    </div>
+
+
+
+
+    <script src="js/global.js"></script>
+
+    <script src="vendor/apexchart/apexcharts.min.js"></script>
+    <script src="vendor/apexchart/apexchart-init.js"></script>
+
+    <script src="vendor/jquery-sparkline/jquery.sparkline.min.js"></script>
+    <script src="js/plugins/sparkline-init.js"></script>
+    <script src="js/scripts.js"></script>
+
+    <script src="js/settings.js"></script>
+    <script src="js/quixnav-init.js"></script>
+    <script src="js/styleSwitcher.js"></script>
+</body>
+
+
+<!-- Mirrored from quixlab.com/demo/tradix/dark/price.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 13 Oct 2020 10:54:50 GMT -->
+</html>

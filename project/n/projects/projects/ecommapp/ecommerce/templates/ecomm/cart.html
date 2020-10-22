@@ -1,0 +1,350 @@
+<!doctype html>
+
+{% extends 'ecomm/base.html' %}
+
+{% include 'ecomm/base.html' with products=products %}
+
+
+{% block cart%}
+{% if cart %}
+        <div class="same-style-2 same-style-2-font-inc header-cart">
+            <a class="cart-active" href="#">
+                <i class="icon-basket-loaded" style="color: #000"></i><span class="pro-count red">{{cart.qty_total}}</span>
+            </a>
+        </div>
+        {% else %}
+        <div class="same-style-2 same-style-2-font-inc header-cart">
+            <a class="cart-active" href="#">
+                <i class="icon-basket-loaded" style="color: #000"></i><span class="pro-count red">0</span>
+            </a>
+        </div>
+     {% endif %}
+{% endblock %}
+
+
+
+{% load static %}
+ {% block tittle %}<title>Cart</title>{% endblock %}
+
+{% block bg %}
+        <div class="breadcrumb-area bg-gray">
+            <div class="container">
+                <div class="breadcrumb-content text-center">
+                    <ul>
+                        <li>
+                            <a href="{% url 'product_store' %}">Home</a>
+                        </li>
+                        <li class="active">Cart</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+{% endblock %}
+
+{% block content %}
+
+<div class="container">
+
+  {% if messages %}
+    {% for message in messages %}
+          <div id="snackbar">{{message}}</div>
+
+    {% endfor %}
+
+  {% endif %}
+</div>
+
+
+    {% if cart %}
+        <div class="cart-main-area pt-115 pb-120">
+            <div class="container">
+                <h3 class="cart-page-title">Your cart items</h3>
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                            <div class="table-content table-responsive cart-table-content">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Image</th>
+                                            <th>Product Name</th>
+                                            <th>Price</th>
+                                            <th>Qty</th>
+                                            <th>Subtotal</th>
+                                            <th>action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    {% for cart in orderitem %}
+                                        <tr>
+                                          <td class="product-thumbnail">
+                                              <a href="#"><img class="cartimg" src="{{cart.item.imageURL}}" alt=""></a>
+                                          </td>
+
+                                            <td class="product-name"><a  href="">{{cart.item.product_name}}</a></td>
+                                            <td class="product-price-cart"><span class="amount">{{cart.item.price |floatformat:2}}</span></td>
+
+
+                                           <td class="product-quantity pro-details-quality">
+                                                        <div class="">
+                                                          <div class="row">
+                                                             <div class="col-sm inc">
+                                                               <button  id="inc{{cart.id}}" style="border:1px solid"  href="{{cart.get_increase_qty}}"><i class="icon_plus"></i></button>
+                                                             </div>
+                                                             <div class="col-sm qtyt">
+                                                               <p  class="qty" id="qty{{cart.id}}">{{cart.quantity}}</p>
+                                                             </div>
+                                                             <div class="col-sm qtyt">
+                                                               <button  id="decqty{{cart.id}}" class="dec" style="border:1px solid"  href="{{cart.get_increase_qty}}"><i class="icon_close"></i></button>
+                                                             </div>
+                                                           </div>
+                                                                                                                  <!-- <p style="margin:12px"></p>
+                                                            <a  id="{{cart.id}}" class="disabled" href={{cart.get_decrease_qty}}><i class="icon_close"></i></a> -->
+                                                        </div>
+                                            </td>
+
+
+
+                                            <script type="text/javascript">
+
+
+                                                $(document).ready(function functionName() {
+
+
+                                                  $('button#inc{{cart.id}}').click(function functionName() {
+
+
+                                                    var url= '{{cart.item.get_add_to_cart}}'
+                                                    console.log(url);
+
+                                                    $.ajax({
+
+
+                                                      url: url,
+                                                      type: 'get',
+                                                      dataType: 'json',
+
+
+                                                      success: function functionName(data) {
+
+
+                                                        if (data.inc) {
+
+                                                          console.log(data);
+
+
+
+                                                            const total = data.inc[1]
+                                                            const product= data.inc[2]
+                                                            const grand_total= data.inc[3]
+                                                            const product_subtotal = data.inc[4]
+                                                            const total_item = data.inc[5]
+
+                                                            console.log(total);
+                                                            console.log(product);
+                                                            console.log(grand_total);
+                                                            console.log(product_subtotal);
+                                                            // console.log(product);
+
+                                                            $("#totalcart").html(total)
+                                                            $("#totalcartx").html(total)
+                                                            $("#qty{{cart.id}}").html(total_item)
+                                                            $("#subtotal{{cart.id}}").html('N'+product_subtotal+'.00')
+                                                            $(".grand-total").html('N'+grand_total+'.00')
+                                                            $("#snackbar2").html(product + ' updated successfully')
+                                                            $("#total-item").html(total)
+
+                                                              var x = document.getElementById("snackbar2");
+                                                              x.className = "show";
+                                                              setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+
+
+
+                                                        }
+                                                        else {
+                                                          data.ananymous
+                                                          alert(' Anannymous user add to cart pending');
+                                                        }
+
+                                                      }
+                                                    })
+
+                                                  })
+
+
+                                                  $('#decqty{{cart.id}}').click(function functionName() {
+
+
+                                                    var url= '{{cart.get_decrease_qty}}'
+
+
+                                                    $.ajax({
+
+                                                      url: url,
+                                                      type: 'get',
+                                                      data: 'json',
+
+                                                      success: function functionName(data) {
+
+
+
+                                                        if (data.sub) {
+
+                                                          console.log(data);
+
+
+
+                                                            const cart_total = data.sub[1]
+                                                            const grand_total= data.sub[2]
+                                                            const product_subtotal = data.sub[3]
+                                                            const total_item = data.sub[4]
+                                                            const products_s = data.sub[5]
+
+                                                            console.log(cart_total);
+
+                                                            console.log(grand_total);
+                                                            console.log(product_subtotal);
+                                                            console.log(total_item);
+
+                                                            $("#totalcart").html(cart_total)
+                                                            $("#totalcartx").html(cart_total)
+
+                                                            $("#qty{{cart.id}}").html(total_item)
+                                                            $("#subtotal{{cart.id}}").html('N'+product_subtotal+'.00')
+                                                            $(".grand-total").html('N'+grand_total+'.00')
+                                                            $("#snackbar2").html(products_s + ' updated successfully')
+                                                            $("#total-item").html(cart_total)
+
+                                                              var x = document.getElementById("snackbar2");
+                                                              x.className = "show";
+                                                              setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+
+                                                            }
+                                                      }
+                                                    })
+
+                                                  })
+
+                                                })
+
+
+
+
+                                            </script>
+
+
+
+
+
+                                            <td class="product-subtotal" id="subtotal{{cart.id}}">N{{cart.get_price |floatformat:2}}</td>
+                                            <td class="product-remove">
+                                                <a href="{{cart.get_delete_an_item}}"><i class="icon-close" style="color:red"></i></a>
+                                            </td>
+                                        </tr>
+
+                                   {% endfor %}
+                                    </tbody>
+                                </table>
+                            </div>
+
+
+
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="cart-shiping-update-wrapper">
+                                        <div class="cart-shiping-update">
+                                            <a href="#">Continue Shopping</a>
+                                        </div>
+                                        <div class="cart-clear">
+                                            <button>Update Cart</button>
+                                            <a href="{% url 'clearcart' %}">Clear Cart</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6">
+                                <div class="discount-code-wrapper">
+                                    <div class="title-wrap">
+                                        <h4 class="cart-bottom-title section-bg-gray">Use Coupon Code</h4>
+                                    </div>
+                                    <div class="discount-code">
+                                        <p>Enter your coupon code if you have one.</p>
+                                        <form>
+                                            <input type="text" required="" name="name">
+                                            <button class="cart-btn-2" type="submit">Apply Coupon</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            <div class="col-lg-6 col-md-12">
+
+
+                                <div class="grand-totall">
+                                    <div class="title-wrap">
+                                        <h4 class="cart-bottom-title section-bg-gary-cart">Cart Total</h4>
+                                    </div>
+                                    <h5>Total items <span id="total-item">{{item_total}}</span></h5>
+                                    <!-- <div class="total-shipping">
+                                        <h5>Total shipping</h5>
+                                        <ul>
+                                            <li><input type="checkbox"> Standard <span>$20.00</span></li>
+                                            <li><input type="checkbox"> Express <span>$30.00</span></li>
+                                        </ul>
+                                    </div> -->
+                                    <h4 class="grand-totall-title">Grand Total <span class="grand-total">N{{price_total |floatformat:2}}</span></h4>
+                                    <a href="{% url 'checkout' %}">Proceed to Checkout</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    {% else %}
+
+            <div class="cart-main-area pt-115 pb-120">
+                <div class="container">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="cart-shiping-update-wrapper">
+                                        <div class="cart-shiping-update" style='
+                                                                                    display: block;
+                                                                                      margin-left: auto;
+                                                                                      margin-right: auto;
+                                                                                      '>
+                                            <a style="" href="#"><img src="{% static 'assets/images/cart/empty-cart.png' %}" alt=""></a>
+
+                                            <h4 style="color: #cfcdc8"> No Item in cart  </h4>
+                                             <a href="{% url 'product_store' %}">Shop Now</a>
+                                        </div>
+                                        <div class="cart-clear">
+                                                <!--<button>Shop Now</button>-->
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                </div>
+           </div>
+
+
+    {% endif %}
+
+
+  <div id="snackbar">Item added to cart</div>
+  <div id="snackbar2"></div>
+
+  <div id="snackbar3">item cant go lower than one</div>
+
+
+
+{% endblock %}

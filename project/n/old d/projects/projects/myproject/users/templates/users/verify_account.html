@@ -1,0 +1,88 @@
+<!doctype html>
+
+{% extends 'ecomm/base.html' %}
+{% load static %}
+
+ {% block tittle %}<title>Authenticate</title>{% endblock %}
+
+{% block bg %}
+        <div class="breadcrumb-area bg-gray">
+            <div class="container">
+                <div class="breadcrumb-content text-center">
+                    <ul>
+                        <li>
+                           <a href="{% url 'product_store' %}">Home</a>
+                        </li>
+                        <li class="active">Account Verification</li>
+                    </ul>
+                </div><!doctype html>
+            </div>
+        </div>
+
+{% endblock  %}
+
+{% block content %}
+        <div class="login-register-area pt-115 pb-120">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-7 col-md-12 ml-auto mr-auto">
+                        <div class="login-register-wrapper">
+                            <div class="login-register-tab-list nav">
+<!--                                <a class="active"  href="{% url 'login' %}">-->
+<!--                                    <h4> login </h4>-->
+<!--                                </a>-->
+<!--                                <a href="{% url 'register' %}">-->
+<!--                                    <h4> register </h4>-->
+<!--                                </a>-->
+                            </div>
+
+                      <div class="container">
+                            {% for message in messages %}
+
+                                    {% if message.level == DEFAULT_MESSAGE_LEVELS.WARNING %}
+                                         <div class="alert alert-warning" role="alert">
+                                          {{ message }}<strong><a style="font-size:10px;float:right" href="{% url 'register' %}">  Register</a> </strong>
+                                        </div>
+                                    {% elif message.level == DEFAULT_MESSAGE_LEVELS.INFO %}
+                                        <div class="alert alert-info">
+                                            <strong>Info!</strong> {{ message }}
+                                        </div>
+
+                                    {% endif %}
+
+
+
+                            {% endfor %}
+                        </div>
+
+
+
+
+                            <div class="tab-content">
+                                <div id="lg1" class="tab-pane active">
+                                    <div class="login-form-container">
+                                        <div class="login-register-form">
+
+                                            <form action="#" method="post">
+
+                                                {% csrf_token %}
+                                            <input type="text" name="token" placeholder="Paste code here ">
+
+                                                <div class="button-box">
+                                                    <button type="submit">Verify</button>
+                                                </div>
+                                            </form>
+
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+{% endblock %}

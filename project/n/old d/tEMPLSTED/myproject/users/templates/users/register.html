@@ -1,0 +1,79 @@
+<!doctype html>
+
+{% extends 'ecomm/base.html' %}
+{% load static %}
+
+ {% block tittle %}<title>Authenticate</title>{% endblock %}
+
+{% block bg %}
+        <div class="breadcrumb-area bg-gray">
+            <div class="container">
+                <div class="breadcrumb-content text-center">
+                    <ul>
+                        <li>
+                           <a href="{% url 'product_store' %}">Home</a>
+                        </li>
+                        <li class="active">login - register </li>
+                    </ul>
+                </div><!doctype html>
+            </div>
+        </div>
+
+{% endblock  %}
+
+{% block content %}
+        <div class="login-register-area pt-115 pb-120">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-7 col-md-12 ml-auto mr-auto">
+                        <div class="login-register-wrapper">
+                            <div class="login-register-tab-list nav">
+                                <a  href="{% url 'login' %}">
+                                    <h4> Login </h4>
+                                </a>
+                                <a class="active" href="{% url 'register' %}">
+                                    <h4> register </h4>
+                                </a>
+                            </div>
+
+
+
+                                <div id="lg2" class="tab-pane">
+                                    <div class="login-form-container">
+                                        <div class="login-register-form">
+
+<!--                                            Register-->
+
+                                            <form action="#" method="post">
+                                                {% csrf_token %}
+                                                {% for errors in form.non_field_errors %}
+                                                    <h5 class="" style="color:#ff9494" align="">
+                                                        <i class="fa fa-exclamation-circle"> {{ errors|striptags }}</i>
+                                                    </h5>
+                                                {% endfor %}
+
+                                                {% for form in form %}
+                                                    {{form}}
+                                                {% endfor %}
+
+
+
+                                                <div class="button-box">
+                                                    <button type="submit">Register</button>
+                                                </div>
+                                            </form>
+
+
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+{% endblock %}

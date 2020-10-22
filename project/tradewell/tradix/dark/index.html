@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!-- Mirrored from quixlab.com/demo/tradix/dark/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 13 Oct 2020 10:51:29 GMT -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tradix</title>
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon.png">
+    <link rel="stylesheet" href="vendor/nice-select/css/nice-select.css">
+    <link rel="stylesheet" href="vendor/owl-carousel/css/owl.theme.default.css">
+    <link rel="stylesheet" href="vendor/owl-carousel/css/owl.carousel.min.css">
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div id="preloader">
+        <div class="sk-three-bounce">
+            <div class="sk-child sk-bounce1"></div>
+            <div class="sk-child sk-bounce2"></div>
+            <div class="sk-child sk-bounce3"></div>
+        </div>
+    </div>
+
+    <div id="main-wrapper">
+
+        <div class="header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="navigation">
+                            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                                <a class="navbar-brand" href="index.html"><img src="images/logo.png" alt=""></a>
+                                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                                    data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"
+                                    aria-expanded="false" aria-label="Toggle navigation">
+                                    <span class="navbar-toggler-icon"></span>
+                                </button>
+                                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                                    <ul class="navbar-nav">
+
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Home
+                                            </a>
+                                            <div class="dropdown-menu">
+                                                <a class="dropdown-item" href="index.html">Home 1</a>
+                                                <a class="dropdown-item" href="index2.html">Home 2</a>
+                                            </div>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="price.html">Price</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="wallet.html">Wallet</a>
+                                        </li>
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Company
+                                            </a>
+                                            <div class="dropdown-menu">
+                                                <a class="dropdown-item" href="about.html">About us</a>
+                                                <a class="dropdown-item" href="team.html">Team</a>
+                                                <a class="dropdown-item" href="blog.html">Blog</a>
+                                                <a class="dropdown-item" href="career.html">Career</a>
+                                            </div>
+                                        </li>
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Support
+                                            </a>
+                                            <div class="dropdown-menu">
+                                                <a class="dropdown-item" href="contact.html">Contact us</a>
+                                                <a class="dropdown-item" href="helpdesk.html">Help Desk</a>
+                                                <a class="dropdown-item" href="faq.html">FAQ</a>
+                                            </div>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="dashboard.html">Dashboard</a>
+                                        </li>
+
+                                    </ul>
+                                </div>
+
+                                <div class="signin-btn">
+                                    <a class="btn btn-primary" href="signin.html">Sign in</a>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="intro">
+            <div class="container">
+                <div class="row justify-content-between align-items-center">
+                    <div class="col-xl-6 col-lg-6 col-12">
+                        <div class="intro-content">
+                            <h1>Trade with <strong class="text-primary">Tradix</strong>. <br> Buy and sell
+                                cryptocurrency
+                            </h1>
+                            <p>Fast and secure way to purchase or exchange 150+ cryptocurrencies</p>
+                        </div>
+
+                        <div class="intro-btn">
+                            <a href="#" class="btn btn-primary">Get Started</a>
+                            <a href="#" class="btn btn-outline-primary">Browse Now</a>
+                        </div>
+                    </div>
+                    <div class="col-xl-5 col-lg-6 col-12">
+                        <div class="intro-form-exchange">
+                            <form method="post" name="myform" class="currency_validate">
+                                <div class="form-group">
+                                    <label class="mr-sm-2">Send</label>
+                                    <div class="input-group mb-3">
+                                        <select name='currency' class="form-control">
+                                            <option data-display="Bitcoin" value="bitcoin">Bitcoin</option>
+                                            <option value="litecoin">Litecoin</option>
+                                        </select>
+                                        <input type="text" name="usd_amount" class="form-control" value="125.00 USD">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="mr-sm-2">Get</label>
+                                    <div class="input-group mb-3">
+                                        <select name='currency' class="form-control">
+                                            <option data-display="Bitcoin" value="bitcoin">Bitcoin</option>
+                                            <option value="litecoin">Litecoin</option>
+                                        </select>
+                                        <input type="text" name="usd_amount" class="form-control" value="125.00 USD">
+                                    </div>
+                                    <div class="d-flex justify-content-between mt-0 align-items-center">
+                                        <p class="mb-0">Monthly Limit</p>
+                                        <h6 class="mb-0">$49750 remaining</h6>
+                                    </div>
+                                </div>
+                                <button type="submit" name="submit" class="btn btn-success btn-block">
+                                    Exchange Now
+                                    <i class="la la-arrow-right"></i>
+                                </button>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="price-grid section-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+                        <div class="card">
+                            <div class="card-header">
+                                <div class="media">
+                                    <span><i class="cc BTC"></i></span>
+                                    <div class="media-body">
+                                        Bitcoin
+                                    </div>
+                                </div>
+                                <p class="mb-0"> 24h</p>
+                            </div>
+                            <div class="card-body">
+                                <h3>USD 62,548.2254</h3>
+                                <span class="text-success">+2.05%</span>
+                                <div id="btcChart"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+                        <div class="card">
+                            <div class="card-header">
+                                <div class="media">
+                                    <span><i class="cc LTC"></i></span>
+                                    <div class="media-body">
+                                        Litecoin
+                                    </div>
+                                </div>
+                                <p class="mb-0"> 24h</p>
+                            </div>
+                            <div class="card-body">
+                                <h3>USD 62,548.2254</h3>
+                                <span class="text-success">+2.05%</span>
+                                <div id="ltcChart"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+                        <div class="card">
+                            <div class="card-header">
+                                <div class="media">
+                                    <span><i class="cc DASH"></i></span>
+                                    <div class="media-body">
+                                        Dashcoin
+                                    </div>
+                                </div>
+                                <p class="mb-0"> 24h</p>
+                            </div>
+                            <div class="card-body">
+                                <h3>USD 62,548.2254</h3>
+                                <span class="text-success">+2.05%</span>
+                                <div id="dashChart"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+                        <div class="card">
+                            <div class="card-header">
+                                <div class="media">
+                                    <span><i class="cc XRP"></i></span>
+                                    <div class="media-body">
+                                        Ripple
+                                    </div>
+                                </div>
+                                <p class="mb-0"> 24h</p>
+                            </div>
+                            <div class="card-body">
+                                <h3>USD 62,548.2254</h3>
+                                <span class="text-success">+2.05%</span>
+                                <div id="xrpChart"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+                        <div class="card">
+                            <div class="card-header">
+                                <div class="media">
+                                    <span><i class="cc ETH"></i></span>
+                                    <div class="media-body">
+                                        Ethereum
+                                    </div>
+                                </div>
+                                <p class="mb-0"> 24h</p>
+                            </div>
+                            <div class="card-body">
+                                <h3>USD 62,548.2254</h3>
+                                <span class="text-success">+2.05%</span>
+                                <div id="ethChart"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+                        <div class="card">
+                            <div class="card-header">
+                                <div class="media">
+                                    <span><i class="cc USDT"></i></span>
+                                    <div class="media-body">
+                                        Tether
+                                    </div>
+                                </div>
+                                <p class="mb-0"> 24h</p>
+                            </div>
+                            <div class="card-body">
+                                <h3>USD 62,548.2254</h3>
+                                <span class="text-success">+2.05%</span>
+                                <div id="usdtChart"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+                        <div class="card">
+                            <div class="card-header">
+                                <div class="media">
+                                    <span><i class="cc EOS"></i></span>
+                                    <div class="media-body">
+                                        Eosio
+                                    </div>
+                                </div>
+                                <p class="mb-0"> 24h</p>
+                            </div>
+                            <div class="card-body">
+                                <h3>USD 62,548.2254</h3>
+                                <span class="text-success">+2.05%</span>
+                                <div id="eosChart"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+                        <div class="card">
+                            <div class="card-header">
+                                <div class="media">
+                                    <span><i class="cc XTZ"></i></span>
+                                    <div class="media-body">
+                                        Tezos
+                                    </div>
+                                </div>
+                                <p class="mb-0"> 24h</p>
+                            </div>
+                            <div class="card-body">
+                                <h3>USD 62,548.2254</h3>
+                                <span class="text-success">+2.05%</span>
+                                <div id="xtzChart"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="getstart section-padding">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-xl-8">
+                        <div class="section-title">
+                            <h2>Get started in a few minutes</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4">
+                        <div class="getstart-content">
+                            <span><i class="la la-user-plus"></i></span>
+                            <h3>Create an account</h3>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4">
+                        <div class="getstart-content">
+                            <span><i class="la la-bank"></i></span>
+                            <h3>Link your bank account</h3>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4">
+                        <div class="getstart-content">
+                            <span><i class="la la-exchange"></i></span>
+                            <h3>Start buying & selling</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="portfolio section-padding" data-scroll-index="2">
+            <div class="container">
+                <div class="row py-lg-5 justify-content-center">
+                    <div class="col-xl-7">
+                        <div class="section-title text-center">
+                            <h2>Create your cryptocurrency portfolio today</h2>
+                            <p>Tradix has a variety of features that make it the best place to start trading</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row align-items-center justify-content-between">
+                    <div class="col-xl-7 col-lg-6">
+                        <div class="portfolio_list">
+                            <div class="row">
+                                <div class="col-xl-6">
+                                    <div class="media">
+                                        <span class="port-icon"> <i class="la la-bar-chart"></i></span>
+                                        <div class="media-body">
+                                            <h4>Manage your portfolio</h4>
+                                            <p>Buy and sell popular digital currencies, keep track of them in the one
+                                                place.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-6">
+                                    <div class="media">
+                                        <span class="port-icon"> <i class="la la-calendar-check-o"></i></span>
+                                        <div class="media-body">
+                                            <h4>Recurring buys</h4>
+                                            <p>Invest in cryptocurrency slowly over time by scheduling buys daily,
+                                                weekly,
+                                                or monthly.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-6">
+                                    <div class="media">
+                                        <span class="port-icon"> <i class="la la-lock"></i></span>
+                                        <div class="media-body">
+                                            <h4>Vault protection</h4>
+                                            <p>For added security, store your funds in a vault with time delayed
+                                                withdrawals.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-6">
+                                    <div class="media">
+                                        <span class="port-icon"> <i class="la la-mobile"></i></span>
+                                        <div class="media-body">
+                                            <h4>Mobile apps</h4>
+                                            <p>Stay on top of the markets with the Tradix app for <a
+                                                    href="#">Android</a>
+                                                or
+                                                <a href="#">iOS</a>.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-5 col-lg-6">
+                        <div class="portfolio_img">
+                            <img src="images/portfolio.png" alt="" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="trade-app section-padding">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-xl-6">
+                        <div class="section-title text-center">
+                            <h2>Trade. Anywhere</h2>
+                            <p> All of our products are ready to go, easy to use and offer great value to any kind of
+                                business
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xl-4 col-lg-4 col-md-12">
+                        <div class="card trade-app-content">
+                            <div class="card-body">
+                                <span><i class="la la-mobile"></i></span>
+                                <h4 class="card-title">Mobile</h4>
+                                <p>All the power of Tradix's cryptocurrency exchange, in the palm of your hand. Download
+                                    the
+                                    Tradix mobile crypto trading app today</p>
+
+                                <a href="#"> Know More <i class="la la-arrow-right"></i> </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-12">
+                        <div class="card trade-app-content">
+                            <div class="card-body">
+                                <span><i class="la la-desktop"></i></span>
+                                <h4 class="card-title">Desktop</h4>
+                                <p>Powerful crypto trading platform for those who mean business. The Tradix crypto
+                                    trading
+                                    experience, tailor-made for your Windows or MacOS device.</p>
+
+                                <a href="#"> Know More <i class="la la-arrow-right"></i> </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-12">
+                        <div class="card trade-app-content">
+                            <div class="card-body">
+                                <span><i class="la la-connectdevelop"></i></span>
+                                <h4 class="card-title">API</h4>
+                                <p>The Tradix API is designed to provide an easy and efficient way to integrate your
+                                    trading
+                                    application into our platform.</p>
+
+                                <a href="#"> Know More <i class="la la-arrow-right"></i> </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row pt-5">
+                    <div class="col-xl-12">
+                        <div class="trusted-business py-5 text-center">
+                            <h3>Trusted by Our <strong>Partners & Investors</strong></h3>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-auto">
+                                <div class="trusted-logo">
+                                    <a href="#"><img class="img-fluid" src="images/brand/1.webp" alt=""></a>
+                                </div>
+                            </div>
+                            <div class="col-auto">
+                                <div class="trusted-logo">
+                                    <a href="#"><img class="img-fluid" src="images/brand/2.webp" alt=""></a>
+                                </div>
+                            </div>
+                            <div class="col-auto">
+                                <div class="trusted-logo">
+                                    <a href="#"><img class="img-fluid" src="images/brand/3.webp" alt=""></a>
+                                </div>
+                            </div>
+                            <div class="col-auto">
+                                <div class="trusted-logo">
+                                    <a href="#"><img class="img-fluid" src="images/brand/4.webp" alt=""></a>
+                                </div>
+                            </div>
+                            <div class="col-auto">
+                                <div class="trusted-logo">
+                                    <a href="#"><img class="img-fluid" src="images/brand/5.webp" alt=""></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="testimonial section-padding">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-xl-6">
+                        <div class="section-title">
+                            <h2>What our customer says</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-xl-10">
+                        <div class="testimonial-content">
+                            <div class="testimonial1 owl-carousel owl-theme">
+                                <div class="row align-items-center">
+                                    <div class="col-xl-6 col-lg-6">
+                                        <div class="customer-img">
+                                            <img class="img-fluid" src="images/testimonial/1.jpg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6 col-lg-6">
+                                        <div class="customer-review">
+                                            <img class="img-fluid" src="images/brand/2.webp" alt="">
+                                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi voluptas
+                                                dignissimos similique quas molestiae doloribus recusandae voluptatem et
+                                                repudiandae veritatis.</p>
+                                            <div class="customer-info">
+                                                <h6>Mr John Doe</h6>
+                                                <p>CEO, Example Company</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row align-items-center">
+                                    <div class="col-xl-6 col-lg-6">
+                                        <div class="customer-img">
+                                            <img class="img-fluid" src="images/testimonial/2.jpg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6 col-lg-6">
+                                        <div class="customer-review">
+                                            <img class="img-fluid" src="images/brand/3.webp" alt="">
+                                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi voluptas
+                                                dignissimos similique quas molestiae doloribus recusandae voluptatem et
+                                                repudiandae veritatis.</p>
+                                            <div class="customer-info">
+                                                <h6>Mr Abraham</h6>
+                                                <p>CEO, Example Company</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="promo section-padding">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-xl-8">
+                        <div class="section-title text-center">
+                            <h2>The most trusted cryptocurrency platform</h2>
+                            <p> Here are a few reasons why you should choose Tradix
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row align-items-center py-5">
+                    <div class="col-xl-4 col-lg-4 col-md-4">
+                        <div class="promo-content">
+                            <div class="promo-content-img">
+                                <img class="img-fluid" src="images/svg/protect.svg" alt="">
+                            </div>
+                            <h3>Secure storage </h3>
+                            <p>We store the vast majority of the digital assets in secure offline storage.</p>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-4">
+                        <div class="promo-content">
+                            <div class="promo-content-img">
+                                <img class="img-fluid" src="images/svg/cyber.svg" alt="">
+                            </div>
+                            <h3>Protected by insurance</h3>
+                            <p>Cryptocurrency stored on our servers is covered by our insurance policy.</p>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-4">
+                        <div class="promo-content">
+                            <div class="promo-content-img">
+                                <img class="img-fluid" src="images/svg/finance.svg" alt="">
+                            </div>
+                            <h3>Industry best practices</h3>
+                            <p>Tradix supports a variety of the most popular digital currencies.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="appss section-padding">
+            <div class="container">
+                <div class="row align-items-center justify-content-between">
+                    <div class="col-xl-7 col-lg-6 col-md-6">
+                        <div class="appss-content">
+                            <h2>The secure app to store crypto yourself</h2>
+                            <ul>
+                                <li><i class="la la-check"></i> All your digital assets in one place</li>
+                                <li><i class="la la-check"></i> Use Decentralized Apps</li>
+                                <li><i class="la la-check"></i> Pay friends, not addresses</li>
+                            </ul>
+                            <div class="mt-4">
+                                <a href="#" class="btn btn-primary my-1 waves-effect">
+                                    <img src="images/android.svg" alt="">
+                                </a>
+                                <a href="#" class="btn btn-primary my-1 waves-effect">
+                                    <img src="images/apple.svg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-5 col-lg-6 col-md-6">
+                        <div class="appss-img">
+                            <img class="img-fluid" src="images/app.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="blog section-padding">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-xl-6">
+                        <div class="section-title text-center">
+                            <h2>Blog</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xl-4 col-lg-4 col-md-12">
+                        <div class="blog-grid">
+                            <div class="card">
+                                <img class="img-fluid" src="images/blog/1.jpg" alt="">
+                                <div class="card-body">
+                                    <a href="blog-single.html">
+                                        <h4 class="card-title">Why does Litecoin need MimbleWimble?</h4>
+                                    </a>
+                                    <p class="card-text">Cras chinwag brown bread Eaton cracking goal so I said a load
+                                        of
+                                        old tosh baking cakes.!</p>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="meta-info">
+                                        <a href="#" class="author"><img src="images/avatar/5.jpg" alt=""> Admin</a>
+                                        <a href="#" class="post-date"><i class="la la-calendar"></i> 31 July, 2019</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-12">
+                        <div class="blog-grid">
+                            <div class="card">
+                                <img class="img-fluid" src="images/blog/2.jpg" alt="">
+                                <div class="card-body">
+                                    <a href="blog-single.html">
+                                        <h4 class="card-title">How to securely store your HD wallet seeds?</h4>
+                                    </a>
+                                    <p class="card-text">Cras chinwag brown bread Eaton cracking goal so I said a load
+                                        of
+                                        old tosh baking cakes.!</p>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="meta-info">
+                                        <a href="#" class="author"><img src="images/avatar/6.jpg" alt=""> Admin</a>
+                                        <a href="#" class="post-date"><i class="la la-calendar"></i> 31 July, 2019</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-12">
+                        <div class="blog-grid">
+                            <div class="card">
+                                <img class="img-fluid" src="images/blog/3.jpg" alt="">
+                                <div class="card-body">
+                                    <a href="blog-single.html">
+                                        <h4 class="card-title">Exclusive Interview With Xinxi Wang Of Litecoin</h4>
+                                    </a>
+                                    <p class="card-text">Cras chinwag brown bread Eaton cracking goal so I said a load
+                                        of
+                                        old tosh baking cakes.!</p>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="meta-info">
+                                        <a href="#" class="author"><img src="images/avatar/7.jpg" alt=""> Admin</a>
+                                        <a href="#" class="post-date"><i class="la la-calendar"></i> 31 July, 2019</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="get-touch section-padding">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-xl-6">
+                        <div class="section-title">
+                            <h2>Get in touch. Stay in touch.</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xl-6 col-lg-6 col-md-6">
+                        <div class="get-touch-content">
+                            <div class="media">
+                                <span><i class="fa fa-shield"></i></span>
+                                <div class="media-body">
+                                    <h4>24 / 7 Support</h4>
+                                    <p>Got a problem? Just get in touch. Our support team is available 24/7.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 col-md-6">
+                        <div class="get-touch-content">
+                            <div class="media">
+                                <span><i class="fa fa-cubes"></i></span>
+                                <div class="media-body">
+                                    <h4>Tradix Blog</h4>
+                                    <p>News and updates from the world’s leading cryptocurrency exchange.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 col-md-6">
+                        <div class="get-touch-content">
+                            <div class="media">
+                                <span><i class="fa fa-certificate"></i></span>
+                                <div class="media-body">
+                                    <h4>Careers</h4>
+                                    <p>Help build the future of technology. Start your new career at Tradix.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 col-md-6">
+                        <div class="get-touch-content">
+                            <div class="media">
+                                <span><i class="fa fa-life-ring"></i></span>
+                                <div class="media-body">
+                                    <h4>Community</h4>
+                                    <p>Tradix is global. Join the discussion in our worldwide communities.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div class="bottom section-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-6">
+                        <div class="bottom-logo">
+                            <img class="pb-3" src="images/logo-white.png" alt="">
+
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-lg-2 col-md-6 col-sm-6 col-6">
+                        <div class="bottom-widget">
+                            <h4 class="widget-title">Company</h4>
+                            <ul>
+                                <li><a href="#">About</a></li>
+                                <li><a href="#">Career</a></li>
+                                <li><a href="#">Affiliate</a></li>
+                                <li><a href="#">Our Partner</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-lg-2 col-md-6 col-sm-6 col-6">
+                        <div class="bottom-widget">
+                            <h4 class="widget-title">Support</h4>
+                            <ul>
+                                <li><a href="#">Ticket</a></li>
+                                <li><a href="#">FAQ</a></li>
+                                <li><a href="#">Blog</a></li>
+                                <li><a href="#">Helpdesk</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-6">
+                        <div class="bottom-widget">
+                            <h4 class="widget-title">Exchange Pair</h4>
+                            <div class="row">
+                                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6">
+                                    <ul>
+                                        <li><a href="#">ETH to BTC</a></li>
+                                        <li><a href="#">BTC to ETH</a></li>
+                                        <li><a href="#">LTC to ETH</a></li>
+                                        <li><a href="#">USDT to BTC</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6">
+                                    <ul>
+                                        <li><a href="#">BTC to USDT</a></li>
+                                        <li><a href="#">LTC to BTC</a></li>
+                                        <li><a href="#">XMR to BTC</a></li>
+                                        <li><a href="#">ETC to DASH</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                        <div class="copyright">
+                            <p>© Copyright 2019 <a href="#">Tradix</a> I All Rights Reserved</p>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                        <div class="footer-social">
+                            <ul>
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--removeIf(production)-->
+        <!--**********************************
+            Right sidebar start
+        ***********************************-->
+        <div class="sidebar-right">
+            <a class="sidebar-right-trigger" href="javascript:void(0)">
+                <span><i class="fa fa-cog fa-spin"></i></span>
+            </a>
+            <div class="sidebar-right-inner">
+                <div class="admin-settings">
+                    <div class="opt-background">
+                        <p>Font Family</p>
+                        <select class="form-control" name="theme_font" id="theme_font">
+                            <option value="nunito">Nunito</option>
+                            <option value="opensans">Open Sans</option>
+
+                        </select>
+                    </div>
+                    <div>
+                        <p>Primary Color</p>
+                        <div class="opt-nav-header-color">
+                            <span>
+                                <input type="radio" name="navigation_header" value="color_1"
+                                    class="filled-in chk-col-primary" id="nav_header_color_1" />
+                                <label for="nav_header_color_1"></label>
+                            </span>
+                            <span>
+                                <input type="radio" name="navigation_header" value="color_2"
+                                    class="filled-in chk-col-primary" id="nav_header_color_2" />
+                                <label for="nav_header_color_2"></label>
+                            </span>
+                            <span>
+                                <input type="radio" name="navigation_header" value="color_3"
+                                    class="filled-in chk-col-primary" id="nav_header_color_3" />
+                                <label for="nav_header_color_3"></label>
+                            </span>
+                            <span>
+                                <input type="radio" name="navigation_header" value="color_4"
+                                    class="filled-in chk-col-primary" id="nav_header_color_4" />
+                                <label for="nav_header_color_4"></label>
+                            </span>
+                            <span>
+                                <input type="radio" name="navigation_header" value="color_5"
+                                    class="filled-in chk-col-primary" id="nav_header_color_5" />
+                                <label for="nav_header_color_5"></label>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="opt-header-color">
+                        <p>Background Color</p>
+                        <div>
+                            <span>
+                                <input type="radio" name="header_bg" value="color_1" class="filled-in chk-col-primary"
+                                    id="header_color_1">
+                                <label for="header_color_1"></label>
+                            </span>
+                            <span>
+                                <input type="radio" name="header_bg" value="color_2" class="filled-in chk-col-primary"
+                                    id="header_color_2">
+                                <label for="header_color_2"></label>
+                            </span>
+                            <span>
+                                <input type="radio" name="header_bg" value="color_3" class="filled-in chk-col-primary"
+                                    id="header_color_3">
+                                <label for="header_color_3"></label>
+                            </span>
+                            <span>
+                                <input type="radio" name="header_bg" value="color_4" class="filled-in chk-col-primary"
+                                    id="header_color_4">
+                                <label for="header_color_4"></label>
+                            </span>
+                            <span>
+                                <input type="radio" name="header_bg" value="color_5" class="filled-in chk-col-primary"
+                                    id="header_color_5">
+                                <label for="header_color_5"></label>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--**********************************
+            Right sidebar end
+        ***********************************-->
+        <!--endRemoveIf(production)-->
+    </div>
+
+
+
+
+
+
+    <script src="js/global.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <script src="vendor/owl-carousel/js/owl.carousel.min.js"></script>
+    <script src="js/plugins/owl-carousel-init.js"></script>
+
+    <script src="vendor/apexchart/apexcharts.min.js"></script>
+    <script src="vendor/apexchart/apexchart-init.js"></script>
+
+    <script src="js/scripts.js"></script>
+
+    <script src="js/settings.js"></script>
+    <script src="js/quixnav-init.js"></script>
+    <script src="js/styleSwitcher.js"></script>
+</body>
+
+
+<!-- Mirrored from quixlab.com/demo/tradix/dark/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 13 Oct 2020 10:52:02 GMT -->
+</html>

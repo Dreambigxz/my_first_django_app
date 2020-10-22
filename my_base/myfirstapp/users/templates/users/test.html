@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% for message in messages %}
+    {{message}}
+{% endfor %}
+<form action="{% url 'test' %}" method="post">
+    {% csrf_token %}
+
+   <label>Message</label>
+    <textarea id="w3review" name="message" rows="4" cols="50" required ></textarea><br>
+   <label>Select User</label>
+         <select id = "myList" name="email">
+
+            {% for email in email %}
+                <option value = "{{email}}">{{email}}</option>
+             {%endfor%}
+         </select>
+    <input type="submit" value="Send">
+</form>
+
+</body>
+</html>

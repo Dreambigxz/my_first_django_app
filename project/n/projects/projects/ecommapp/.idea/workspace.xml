@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="12e7aed2-7a29-46f1-9ee8-11c449b96080" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1gk4c9L3FKZk5rhtZopQq9ebnMN" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
+    <property name="run.code.analysis.last.selected.profile" value="aDefault" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\recent\myproject\norda" />
+      <recent name="E:\recent\myproject" />
+      <recent name="E:\recent\myproject\ecommerce\templates\ecommerce" />
+      <recent name="E:\recent\myproject\ecommerce\templates" />
+      <recent name="E:\recent\myproject\ecommerce" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/userwallet/templates/wallet" />
+      <recent name="$PROJECT_DIR$/userwallet" />
+      <recent name="$PROJECT_DIR$/users/templates/users" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.myfunc">
+    <configuration name="myfunc" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="myproject" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/users" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/users/myfunc.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="test (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="myproject" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/ecommerce/templates/ecomm" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ecommerce/templates/ecomm/test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="myproject" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="tests" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="myproject" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/ecommerce" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ecommerce/tests.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="urls" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="myproject" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/users" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/users/urls.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.myfunc" />
+        <item itemvalue="Python.tests" />
+        <item itemvalue="Python.test (1)" />
+        <item itemvalue="Python.urls" />
+        <item itemvalue="Python.test" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="12e7aed2-7a29-46f1-9ee8-11c449b96080" name="Default Changelist" comment="" />
+      <created>1598645332986</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1598645332986</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.js" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="24" y="121" width="732" height="633" key="#Inspections" timestamp="1599342913120">
+      <screen x="0" y="27" width="1600" height="873" />
+    </state>
+    <state x="24" y="121" width="732" height="633" key="#Inspections/0.27.1600.873@0.27.1600.873" timestamp="1599342913120" />
+    <state x="586" y="313" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1598887463659">
+      <screen x="0" y="0" width="2262" height="1317" />
+    </state>
+    <state x="586" y="313" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.2262.1317@0.0.2262.1317" timestamp="1598887463659" />
+    <state x="496" y="265" width="598" height="392" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1600737076935">
+      <screen x="0" y="27" width="1600" height="873" />
+    </state>
+    <state x="496" y="265" width="598" height="392" key="#com.intellij.fileTypes.FileTypeChooser/0.27.1600.873@0.27.1600.873" timestamp="1600737076935" />
+    <state x="245" y="319" width="488" height="260" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1599007487764">
+      <screen x="0" y="27" width="1600" height="873" />
+    </state>
+    <state x="245" y="319" width="488" height="260" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.27.1600.873@0.27.1600.873" timestamp="1599007487764" />
+    <state x="445" y="231" width="424" height="480" key="FileChooserDialogImpl" timestamp="1602798193679">
+      <screen x="0" y="27" width="1600" height="873" />
+    </state>
+    <state x="629" y="308" key="FileChooserDialogImpl/0.0.2262.1317@0.0.2262.1317" timestamp="1598961771610" />
+    <state x="1126" y="331" key="FileChooserDialogImpl/0.0.2271.1317@0.0.2271.1317" timestamp="1600281738966" />
+    <state x="632" y="308" key="FileChooserDialogImpl/0.0.2272.1317@0.0.2272.1317" timestamp="1599574761547" />
+    <state x="733" y="359" key="FileChooserDialogImpl/0.0.2636.1536@0.0.2636.1536" timestamp="1602756486952" />
+    <state x="445" y="231" width="424" height="480" key="FileChooserDialogImpl/0.27.1600.873@0.27.1600.873" timestamp="1602798193679" />
+    <state width="729" height="210" key="GridCell.Tab.0.bottom" timestamp="1603238597584">
+      <screen x="0" y="27" width="1600" height="873" />
+    </state>
+    <state width="1088" height="346" key="GridCell.Tab.0.bottom/0.0.2262.1317@0.0.2262.1317" timestamp="1598983985269" />
+    <state width="1326" height="442" key="GridCell.Tab.0.bottom/0.0.2636.1536@0.0.2636.1536" timestamp="1602862799601" />
+    <state width="729" height="210" key="GridCell.Tab.0.bottom/0.27.1600.873@0.27.1600.873" timestamp="1603238597584" />
+    <state width="729" height="210" key="GridCell.Tab.0.center" timestamp="1603238597582">
+      <screen x="0" y="27" width="1600" height="873" />
+    </state>
+    <state width="1088" height="346" key="GridCell.Tab.0.center/0.0.2262.1317@0.0.2262.1317" timestamp="1598983985269" />
+    <state width="1326" height="442" key="GridCell.Tab.0.center/0.0.2636.1536@0.0.2636.1536" timestamp="1602862799600" />
+    <state width="729" height="210" key="GridCell.Tab.0.center/0.27.1600.873@0.27.1600.873" timestamp="1603238597582" />
+    <state width="729" height="210" key="GridCell.Tab.0.left" timestamp="1603238597580">
+      <screen x="0" y="27" width="1600" height="873" />
+    </state>
+    <state width="1088" height="346" key="GridCell.Tab.0.left/0.0.2262.1317@0.0.2262.1317" timestamp="1598983985268" />
+    <state width="1326" height="442" key="GridCell.Tab.0.left/0.0.2636.1536@0.0.2636.1536" timestamp="1602862799600" />
+    <state width="729" height="210" key="GridCell.Tab.0.left/0.27.1600.873@0.27.1600.873" timestamp="1603238597580" />
+    <state width="729" height="210" key="GridCell.Tab.0.right" timestamp="1603238597583">
+      <screen x="0" y="27" width="1600" height="873" />
+    </state>
+    <state width="1088" height="346" key="GridCell.Tab.0.right/0.0.2262.1317@0.0.2262.1317" timestamp="1598983985269" />
+    <state width="1326" height="442" key="GridCell.Tab.0.right/0.0.2636.1536@0.0.2636.1536" timestamp="1602862799601" />
+    <state width="729" height="210" key="GridCell.Tab.0.right/0.27.1600.873@0.27.1600.873" timestamp="1603238597583" />
+    <state x="9" y="203" width="824" height="504" key="IDE.errors.dialog" timestamp="1602599801215">
+      <screen x="0" y="27" width="1600" height="873" />
+    </state>
+    <state x="9" y="203" width="824" height="504" key="IDE.errors.dialog/0.27.1600.873@0.27.1600.873" timestamp="1602599801215" />
+    <state x="190" y="93" width="540" height="741" maximized="true" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1602763351123">
+      <screen x="0" y="0" width="2636" height="1536" />
+    </state>
+    <state x="269" y="100" width="766" height="1117" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.2271.1317@0.0.2271.1317" timestamp="1600353436294" />
+    <state x="190" y="93" width="540" height="741" maximized="true" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.2636.1536@0.0.2636.1536" timestamp="1602763351123" />
+    <state x="190" y="93" width="540" height="741" maximized="true" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.27.1600.873@0.27.1600.873" timestamp="1601251930316" />
+    <state x="4" y="76" width="770" height="769" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1599526396438">
+      <screen x="0" y="27" width="1600" height="873" />
+    </state>
+    <state x="4" y="76" width="770" height="769" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.27.1600.873@0.27.1600.873" timestamp="1599526396438" />
+    <state x="213" y="291" width="618" height="522" key="find.popup" timestamp="1601206190005">
+      <screen x="0" y="27" width="1600" height="873" />
+    </state>
+    <state x="213" y="291" width="618" height="522" key="find.popup/0.27.1600.873@0.27.1600.873" timestamp="1601206190005" />
+    <state x="159" y="212" width="672" height="160" key="search.everywhere.popup" timestamp="1602810948892">
+      <screen x="0" y="27" width="1600" height="873" />
+    </state>
+    <state x="225" y="280" width="672" height="678" key="search.everywhere.popup/0.0.2262.1317@0.0.2262.1317" timestamp="1599477479676" />
+    <state x="226" y="279" width="672" height="160" key="search.everywhere.popup/0.0.2271.1317@0.0.2271.1317" timestamp="1600353221868" />
+    <state x="226" y="279" width="672" height="160" key="search.everywhere.popup/0.0.2272.1317@0.0.2272.1317" timestamp="1599757123025" />
+    <state x="159" y="212" width="672" height="160" key="search.everywhere.popup/0.27.1600.873@0.27.1600.873" timestamp="1602810948892" />
+  </component>
+</project>

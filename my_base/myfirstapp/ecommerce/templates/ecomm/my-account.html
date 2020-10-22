@@ -1,0 +1,486 @@
+
+
+<!doctype html>
+
+{% extends 'ecomm/base.html' %}
+<!--{% load ecomm_extras %}-->
+
+{% load static %}
+{% load mathfilters %}
+
+ {% block tittle %}<title>Account</title>{% endblock %}
+
+{% block bg %}
+        <div class="breadcrumb-area bg-gray">
+            <div class="container">
+                <div class="breadcrumb-content text-center">
+                    <ul>
+                        <li>
+                            <a href="{% url 'product_store' %}">Home</a>
+                        </li>
+                        <li class="active">My Account</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+{% endblock %}
+{% block content %}
+
+<br>
+
+<!--
+        <div class="container">
+            {% for message in messages %}
+
+                    {% if message.level == DEFAULT_MESSAGE_LEVELS.ERROR %}
+                         <div class="alert alert-danger" role="alert">
+                          {{ message }}
+                        </div>
+                    {% elif message.level == DEFAULT_MESSAGE_LEVELS.SUCCESS %}
+                        <div class="alert alert-success">
+                            <strong>Success!</strong> {{ message }}
+                        </div>
+
+                    {% elif message.level == PASSMIS %}
+                        <div class="alert alert-success">
+                            <strong>Success!</strong> {{ message }}
+                        </div>
+
+                    {% endif %}
+
+
+
+            {% endfor %}
+        </div>
+
+ -->
+
+
+        <!-- my account wrapper start -->
+        <div class="my-account-wrapper pt-120 pb-120">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <!-- My Account Page Start -->
+                        <div class="myaccount-page-wrapper">
+                            <!-- My Account Tab Menu Start -->
+                            <div class="row">
+                                <div class="col-lg-3 col-md-4">
+                                    <div class="myaccount-tab-menu nav" role="tablist">
+                                        <a href="#dashboad" class="active" data-toggle="tab"><i class="fa fa-dashboard"></i>
+                                            Dashboard</a>
+                                        <a href="#orders" data-toggle="tab"><i class="fa fa-cart-arrow-down"></i> Orders</a>
+                                        <a href="#download" data-toggle="tab"><i class="fa fa-cloud-download"></i> Download</a>
+                                        <a href="#payment-method" data-toggle="tab"><i class="fa fa-credit-card"></i> Payment
+                                            Method</a>
+                                        <a href="#address-edit" data-toggle="tab"><i class="fa fa-map-marker"></i> address</a>
+                                        <a href="#account-info" data-toggle="tab"><i class="fa fa-user"></i> Account Details</a>
+                                        <a href="{% url 'logout' %}"><i class="fa fa-sign-out"></i> Logout</a>
+                                    </div>
+                                </div>
+                                <!-- My Account Tab Menu End -->
+                                <!-- My Account Tab Content Start -->
+
+
+
+
+
+                                <div class="col-lg-9 col-md-8">
+                                    <div class="tab-content" id="myaccountContent">
+                                        <!-- Single Tab Content Start -->
+                                        <div class="tab-pane fade show active" id="dashboad" role="tabpanel">
+                                            <div class="myaccount-content">
+                                                <h3>Dashboard</h3>
+                                                <div class="welcome">
+                                                    <p>Hello, <strong>{{user.username}}</strong> (If Not <strong>{{user.username}} !</strong><a href="#" class="logout"> Logout</a>)</p>
+                                                </div>
+
+                                                <p class="mb-0">From your account dashboard. you can easily check & view your recent orders, manage your shipping and billing addresses and edit your password and account details.</p><br>
+                                                <p class="mb-0">Note: You can track your orders with Order Id</p>
+                                            </div>
+                                        </div>
+                                        <!-- Single Tab Content End -->
+                                        <!-- Single Tab Content Start -->
+
+
+
+                                        <div class="tab-pane fade" id="orders" role="tabpanel">
+                                            <div class="myaccount-content">
+                                                <h3>Orders</h3>
+                                                <div class="myaccount-table table-responsive text-center">
+                                                    <table class="table table-bordered">
+                                                        <thead class="thead-light">
+                                                            <tr>
+                                                                <th>Order ID</th>
+                                                                <th>Product</th>
+                                                                <th>Quantity</th>
+                                                                <th>Date</th>
+                                                                <th>Status</th>
+                                                                <th>Total</th>
+                                                                <th>Action</th>
+                                                            </tr>
+                                                        </thead>
+
+                                                    {% if order %}
+                                                        <tbody>
+
+                                                        {% for order in order %}
+                                                            <tr>
+
+                                                                <td>{{order.order_id}}</td>
+                                                                <td>{{order.orderitem.product_name}}</td>
+                                                                <td>{{order.user_quantity}}</td>
+                                                                <td>{{order.ordered_date}}</td>
+                                                                {% if order.completed is False %}
+                                                                <td style="color:red">Pending</td>
+                                                                {% else %}
+                                                                <td style="color: green">Completed</td>
+                                                                {% endif %}
+                                                                <td>{{order.total |add:500|floatformat:2}}</td>
+                                                                <td><a href="#" class="check-btn sqr-btn ">View</a></td>
+                                                            </tr>
+                                                        {% endfor %}
+                                                        </tbody>
+                                                    {% else %}
+
+                                                        <p> You have no Order History yet <a href="#">Shop Now</a></p>
+                                                    {% endif %}
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+
+
+
+                                        <!-- Single Tab Content End -->
+                                        <!-- Single Tab Content Start -->
+                                        <div class="tab-pane fade" id="download" role="tabpanel">
+                                            <div class="myaccount-content">
+                                                <h3>Downloads</h3>
+                                                <div class="myaccount-table table-responsive text-center">
+                                                    <table class="table table-bordered">
+                                                        <thead class="thead-light">
+                                                            <tr>
+                                                                <th>Product</th>
+                                                                <th>Date</th>
+                                                                <th>Expire</th>
+                                                                <th>Download</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>Haven - Free Real Estate PSD Template</td>
+                                                                <td>Aug 22, 2018</td>
+                                                                <td>Yes</td>
+                                                                <td><a href="#" class="check-btn sqr-btn "><i class="fa fa-cloud-download"></i> Download File</a></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>HasTech - Profolio Business Template</td>
+                                                                <td>Sep 12, 2018</td>
+                                                                <td>Never</td>
+                                                                <td><a href="#" class="check-btn sqr-btn "><i class="fa fa-cloud-download"></i> Download File</a></td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+
+
+
+                                        <!-- Single Tab Content End -->
+                                        <!-- Single Tab Content Start -->
+                                        <div class="tab-pane fade" id="payment-method" role="tabpanel">
+                                            <div class="myaccount-content">
+                                                <h3>Payment Method</h3>
+                                                <p class="saved-message">You Can't Saved Your Payment Method yet.</p>
+                                            </div>
+                                        </div>
+                                        <!-- Single Tab Content End -->
+                                        <!-- Single Tab Content Start -->
+                                        <div class="tab-pane fade" id="address-edit" role="tabpanel">
+                                            <div class="myaccount-content">
+                                                <h3>Shipping Address</h3>
+                                                <address>
+                                                    {% for shipping in shipping_address %}
+                                                    <p><strong>{{shipping.full_name}}</strong></p>
+                                                    <p>{{shipping.mobile_phone_number}}</p>
+                                                    <p>{{shipping.address}}</p>
+                                                    <p>{{shipping.state_of_origin}}</p>
+
+                                                    <!-- <button type="button" data-url="{% url 'update_shipping_address' shipping.id %}"
+                                                    style="width: 100%"
+                                                    class="btn btn-outline-secondary update_shipping_btn" id="shipping_add">
+                                                     Edit
+                                                   </button> -->
+
+                                                   <button id="update_shipping_btn" class="btn btn-secondary" type="button" name="button"><i class="fa fa-edit"></i>Edit Address</button>
+
+
+
+                                         <!-- The Modal -->
+                                           <div class="modal fade" id="shipping_add">
+                                             <div class="modal-dialog">
+                                               <div class="modal-content">
+
+                                                 <!-- Modal Header -->
+                                                 <div class="modal-header">
+                                                   <h4 class="modal-title">Edit shipping address</h4>
+                                                   <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                 </div>
+
+                                                 <!-- Modal body -->
+                                                 <div class="modal-body">
+                                                   Modal body..
+
+
+                                                 </div>
+
+                                                 <!-- Modal footer -->
+                                                 <div class="modal-footer">
+                                                   <button id="btn"type="button" data-dismiss="modal" class="btn btn-secondary" name="button">Save</button>
+
+                                                   <!-- <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button> -->
+                                                 </div>
+
+                                               </div>
+                                             </div>
+                                           </div>
+
+
+                                           <script>
+
+                                               var myurl= "{% url 'update_shipping_address' shipping.id %}"
+                                               console.log(myurl);
+
+
+                                                   $(document).ready(function () {
+
+                                                     $('button#update_shipping_btn').click(function functionName() {
+
+
+                                                       $.ajax({
+                                                         url: myurl,
+                                                         type: 'get',
+                                                         dataType: 'json',
+
+                                                       beforeSend: function() {
+
+                                                         $("#shipping_add").modal("show");
+
+
+                                                       },
+
+                                                       success: function (data) {
+
+                                                         $("#shipping_add .modal-body").html(data.html_form);
+
+
+                                                         $('#btn').click(function (e) {
+
+                                                           e.preventDefault()
+
+                                                           var form_data = $('#update_shipp_add_form').serialize();
+                                                           //
+                                                           // console.log(form_data);
+                                                           // console.log(myurl);
+
+                                                           $.ajax({
+
+                                                             url: myurl,
+                                                             type: 'post',
+                                                             data: form_data,
+
+                                                             success: function functionName(data) {
+
+                                                               if (data.saved) {
+
+                                                                 var x = document.getElementById("snackbar2");
+                                                                 x.className = "show";
+                                                                 setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+
+                                                                 setTimeout(function(){location.reload()}, 2000);
+
+
+
+
+                                                               }
+
+
+
+
+                                                             }
+                                                           })
+
+                                                         })
+
+                                                       }
+
+
+
+                                                     })
+
+                                                   })
+
+                                                   })
+
+                                               </script>
+                                                </address>
+
+
+
+                                                {% empty %}
+
+
+                                                <div class="account-details-form">
+                                                    <form  method="post" id="update_sa" action=''>
+
+                                                      <p>You have address yet Please Update shiiping address</p>
+
+                                                      {% csrf_token %}
+                                                        <div class="row">
+                                                            <div class="col-lg-6">
+                                                                <div class="single-input-item">
+                                                                  {{forms.as_p}}
+                                                                </div>
+
+
+                                                            <div class="single-input-item">
+                                                                <button id="save_sh" class="check-btn sqr-btn ">Save Changes</button>
+                                                            </div>
+
+                                                            </div>
+
+                                                        </div>
+                                                </form>
+
+                                                <script type="text/javascript">
+
+                                                    $('button#save_sh').click(function functionName(e) {
+
+                                                      e.preventDefault()
+
+                                                      console.log('c');
+
+                                                      var form_data = $('#update_sa').serialize();
+                                                      var myurl = "{% url 'checkout' %}"
+                                                      $.ajax({
+
+                                                        url: myurl,
+                                                        type: 'post',
+                                                        data: form_data,
+
+
+                                                      success: function functionName(data) {
+
+                                                        console.log(data);
+
+                                                        if (data.saved) {
+
+                                                          var x = document.getElementById("snackbar2");
+                                                          x.className = "show";
+                                                          setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+
+                                                          setTimeout(function(){location.reload()}, 2000);
+
+
+                                                        }
+
+                                                      }
+
+                                                      })
+                                                    })
+
+                                                </script>
+                                              </div>
+
+                                                {% endfor %}
+
+                                            </div>
+                                        </div>
+
+
+                                        <div id="snackbar2">Shipping Address updated successfully</div>
+
+
+                                        <!-- Single Tab Content End -->
+                                        <!-- Single Tab Content Start -->
+                                        <div class="tab-pane fade" id="account-info" role="tabpanel">
+                                            <div class="myaccount-content">
+                                                <h3>Account Details</h3>
+                                                <div class="account-details-form">
+                                                    <form  method="post">
+                                                        {% csrf_token %}
+                                                        <div class="row">
+                                                            <div class="col-lg-6">
+                                                                <div class="single-input-item">
+                                                                    <label for="full-name" class="required">Full Name</label>
+                                                                    <input type="text" name="full-name" id="full-name" value="{{user_profile.full_name}}" />
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-6">
+                                                                <div class="single-input-item">
+                                                                    <label for="user-name" class="required">User Name</label>
+                                                                    <input type="text" name="username" id="user-name" value="{{user_profile.username}}" />
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="single-input-item">
+                                                            <label for="display-name" class="required">Email Address</label>
+                                                            <input type="email" name="email" id="display-name" value="{{user_profile.email}}" disabled="disabled" title="you are not allowed to edit" />
+                                                        </div>
+                                                        <div class="single-input-item">
+                                                            <label for="phone" class="required">Phone Number</label>
+                                                            <input type="number" name="number" id="phone" value="{{user_profile.phone_number}}" />
+                                                        </div>
+
+
+                                                        <fieldset>
+                                                            <legend>Password change</legend>
+                                                            <div class="single-input-item">
+                                                                <label for="current-pwd" class="required">Current Password</label>
+                                                                <input type="password" name="current-pwd" id="current-pwd" value="{{user_profile.password1}}" />
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-lg-6">
+                                                                    <div class="single-input-item">
+                                                                        <label for="new-pwd" class="required">New Password</label>
+                                                                        <input type="password"  name="new-pwd" id="new-pwd" />
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-lg-6">
+                                                                    <div class="single-input-item">
+                                                                        <label for="confirm-pwd" class="required">Confirm Password</label>
+                                                                        <input type="password" name="confirm-pwd" id="confirm-pwd" />
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </fieldset>
+                                                        <div class="single-input-item">
+                                                            <button class="check-btn sqr-btn ">Save Changes</button>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div> <!-- Single Tab Content End -->
+                                    </div>
+                                </div> <!-- My Account Tab Content End -->
+                            </div>
+                        </div> <!-- My Account Page End -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- my account wrapper end -->
+
+
+
+
+
+
+{% endblock %}

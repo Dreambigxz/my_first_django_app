@@ -1,0 +1,12 @@
+
+
+{% block content %}
+<form method="post">{% csrf_token %}
+    {{ forms.subscription }}
+    <input type="submit" value="Subscribe">
+</form>
+<form method="post">{% csrf_token %}
+    {{ forms.contact }}
+    <input type="submit" value="Send">
+</form>
+{% endblock content %}
