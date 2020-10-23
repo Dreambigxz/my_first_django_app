@@ -160,12 +160,12 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 #SMTP CONFIGURATION WITH GMAIL
 # EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-SEND_GRID_API_KEY= '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'
+SEND_GRID_API_KEY= ''
 
 EMAIL_HOST= 'smtp.gmail.com'
 EMAIL_PORT= 587
-EMAIL_HOST_USER='onyemordidaniel@gmail.com'
-EMAIL_HOST_PASSWORD='08147432341'
+EMAIL_HOST_USER=''
+EMAIL_HOST_PASSWORD=''
 EMAIL_USE_TLS= True
 
 #EMAIL_USE_SSL= ''
