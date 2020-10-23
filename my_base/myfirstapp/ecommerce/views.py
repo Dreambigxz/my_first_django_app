@@ -314,7 +314,7 @@ def payment(request):
 
     print(ref_id['amount'])
 
-    rave = Rave("FLWPUBK_TEST-ad745b9b6ef96bf9f1b2834ac7fbc73a-X", 'FLWSECK_TEST-a8e4e10033ed523390c9f839d2214509-X',
+    rave = Rave("PK", "SK")
                 usingEnv=False)
 
     verify_payment = rave.Card.verify(ref_id['tx_ref'])
